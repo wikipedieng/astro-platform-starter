@@ -1,9 +1,97 @@
----
-
----
-
-<footer class="pt-16 pb-12 sm:pt-24 sm:pb-16">
-    <p class="text-sm">
-        <a href="https://docs.netlify.com/frameworks/astro/" class="decoration-dashed text-primary underline-offset-8"> Astro on Netlify </a>
-    </p>
+<footer class="dieng-footer">
+  <div class="dieng-footer-inner">
+    <div class="dieng-footer-brand">
+      <img src="https://cdn-sdotid.adg.id/images/987b7a2d-55b1-4db4-bd8c-87dee40ec0f8_980x980.png" alt="Logo Paket Dieng" class="dieng-footer-logo" width="36" height="36" />
+      <span class="dieng-footer-title">Paket Wisata Dieng</span>
+    </div>
+    <ul class="dieng-footer-links">
+      <li><a href="https://www.putratour.com/" target="_blank" rel="noopener">Putra Tour</a></li>
+      <li><a href="https://wa.me/628112828283" target="_blank" rel="noopener">WhatsApp</a></li>
+      <li><a href="https://www.putratour.com/paket-wisata-dieng/1-hari/" target="_blank" rel="noopener">Paket 1 Hari</a></li>
+      <li><a href="https://www.putratour.com/paket-wisata-dieng/2-hari/" target="_blank" rel="noopener">Paket 2 Hari</a></li>
+      <li><a href="https://www.putratour.com/paket-wisata-dieng/3-hari/" target="_blank" rel="noopener">Paket 3 Hari</a></li>
+      <li><a href="https://www.putratour.com/paket-wisata-dieng/paket-jeep-dieng/" target="_blank" rel="noopener">Jeep Dieng</a></li>
+    </ul>
+    <div class="dieng-footer-copyright">
+      © {new Date().getFullYear()} Paket Wisata Dieng by <a href="https://www.putratour.com/" target="_blank" rel="noopener" class="underline hover:text-blue-700">Putra Tour</a>
+    </div>
+  </div>
 </footer>
+
+<style>
+.dieng-footer {
+  background: linear-gradient(100deg, #f8fafd 0%, #e9f3ff 100%);
+  padding: 2.3rem 0 1.3rem 0;
+  border-top: 1.5px solid #e7eaf3;
+  font-size: 1rem;
+  color: #263259;
+}
+.dieng-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.dieng-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #253257;
+}
+.dieng-footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1.2px solid #e5eaf7;
+  box-shadow: 0 2px 10px #21519c0c;
+  background: #fff;
+}
+.dieng-footer-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.dieng-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+.dieng-footer-links a {
+  color: #27539f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.04rem;
+  transition: color .13s;
+  border-bottom: 1px dashed #dbe9fa50;
+  padding-bottom: 1.5px;
+}
+.dieng-footer-links a:hover {
+  color: #199d68;
+  border-bottom: 1.5px solid #199d68;
+}
+.dieng-footer-copyright {
+  color: #72819b;
+  font-size: 0.98rem;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+@media (max-width: 700px) {
+  .dieng-footer-inner {
+    padding: 0 2vw;
+    gap: 1rem;
+  }
+  .dieng-footer-links {
+    gap: 0.7rem 1.1rem;
+    font-size: 0.99rem;
+  }
+}
+</style>
