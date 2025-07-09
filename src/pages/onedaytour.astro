@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Paket Wisata Dieng 1 Hari – One Day Trip Sunrise & Eksplorasi Lengkap";
+const pageDesc = "Paket wisata Dieng 1 hari terbaik: Sunrise Sikunir, Candi Arjuna, Kawah Sikidang, Telaga Warna, kuliner, transportasi nyaman. Booking mudah via WhatsApp. Cocok untuk keluarga & private group!";
+const waLink = "https://wa.me/628112828283";
+
+const itinerary = [
+  { time: "00.01", activity: "Penjemputan dari kota asal (Wonosobo, Purwokerto, Jogja, Semarang, Solo, dsb)" },
+  { time: "04.30", activity: "Sunrise Sikunir & Telaga Cebong" },
+  { time: "07.00", activity: "Sarapan di Dieng" },
+  { time: "08.00", activity: "Jelajah Kawah Sikidang" },
+  { time: "09.30", activity: "Tour Komplek Candi Arjuna" },
+  { time: "10.30", activity: "Batu Ratapan Angin & Telaga Warna" },
+  { time: "12.30", activity: "Dieng Plateau Theater" },
+  { time: "13.30", activity: "Kuliner khas & oleh-oleh" },
+  { time: "15.00", activity: "Perjalanan pulang" },
+];
+
+const fasilitas = [
+  "Transportasi AC (PP kota asal – Dieng)",
+  "Driver profesional",
+  "BBM, parkir, dan tol",
+  "Tiket masuk destinasi",
+  "2x makan (sarapan & makan siang)",
+  "Air mineral",
+  "Tour guide lokal",
+  "Free dokumentasi foto"
+];
+
+const harga = [
+  { peserta: "2–3 orang", harga: "Rp 1.250.000/pax" },
+  { peserta: "4–6 orang", harga: "Rp 950.000/pax" },
+  { peserta: "7–10 orang", harga: "Rp 800.000/pax" },
+  { peserta: "11+ orang", harga: "Hubungi kami" },
+];
+
+---
+
+<head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
+  <link rel="canonical" href="https://paketwisatadieng.netlify.app/paket-1-hari/" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDesc} />
+  <meta property="og:url" content="https://paketwisatadieng.netlify.app/paket-1-hari/" />
+  <meta property="og:type" content="article" />
+</head>
+
+<Layout title="Paket Wisata Dieng 1 Hari">
+  <section class="dieng-hero py-10 text-center">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-[#1a2341] drop-shadow-sm">Paket Wisata Dieng 1 Hari</h1>
+    <p class="max-w-xl mx-auto text-lg text-gray-800 mb-5">
+      Nikmati trip singkat penuh pengalaman: sunrise Sikunir, candi, kawah, telaga, kuliner & dokumentasi.  
+      **One day trip Dieng** paling lengkap untuk keluarga, couple, dan private group.  
+      <span class="font-semibold text-green-700">Langsung konsultasi & booking lewat WhatsApp!</span>
+    </p>
+    <a href={waLink} target="_blank" rel="noopener" class="btn-wa">Booking / Tanya Paket 1 Hari</a>
+  </section>
+
+  <section class="dieng-cardgrid py-7">
+    <div class="dieng-card">
+      <h2 class="dieng-card-title">Itinerary Paket 1 Hari</h2>
+      <ol class="dieng-itinerary">
+        {itinerary.map((item) => (
+          <li><span class="dieng-time">{item.time}</span> <span class="dieng-activity">{item.activity}</span></li>
+        ))}
+      </ol>
+    </div>
+    <div class="dieng-card">
+      <h2 class="dieng-card-title">Fasilitas Termasuk</h2>
+      <ul class="dieng-fasilitas">
+        {fasilitas.map(f => <li>✅ {f}</li>)}
+      </ul>
+    </div>
+    <div class="dieng-card">
+      <h2 class="dieng-card-title">Harga Paket (per orang)</h2>
+      <table class="dieng-table">
+        <thead>
+          <tr><th>Jumlah Peserta</th><th>Harga</th></tr>
+        </thead>
+        <tbody>
+          {harga.map(h => (
+            <tr>
+              <td>{h.peserta}</td>
+              <td>{h.harga}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div class="mt-3 text-sm text-gray-500">*Hubungi kami untuk penawaran group & custom trip</div>
+    </div>
+  </section>
+
+  <div class="text-center mt-10">
+    <a href={waLink} target="_blank" rel="noopener" class="btn-wa-big">Booking / Konsultasi Sekarang</a>
+  </div>
+</Layout>
+
+<style>
+.dieng-hero {
+  background: linear-gradient(110deg,#eaf6ff 0,#fff 100%);
+}
+.btn-wa, .btn-wa-big {
+  background: linear-gradient(90deg,#21be63 60%,#1582dd 100%);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: 0.8rem 2.4rem;
+  font-size: 1.08rem;
+  box-shadow: 0 4px 24px #21be6330;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.6rem 0;
+  transition: .15s;
+}
+.btn-wa:hover, .btn-wa-big:hover {
+  background: linear-gradient(90deg,#1582dd 60%,#21be63 100%);
+  color: #fff;
+}
+.btn-wa-big {
+  font-size: 1.18rem;
+  padding: 1rem 3.2rem;
+}
+.dieng-cardgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.dieng-card {
+  background: #fff;
+  border-radius: 1.4rem;
+  box-shadow: 0 3px 18px #2a439818;
+  border: 1.3px solid #e4eaf4;
+  padding: 2rem 1.2rem 1.7rem 1.2rem;
+  min-width: 290px;
+  max-width: 340px;
+  flex: 1 1 260px;
+}
+.dieng-card-title {
+  color: #1a2341;
+  font-size: 1.21rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.02em;
+}
+.dieng-itinerary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #244a2c;
+  font-size: 1.06rem;
+}
+.dieng-itinerary li {
+  margin-bottom: 0.42rem;
+  display: flex;
+  align-items: flex-start;
+}
+.dieng-time {
+  font-weight: 700;
+  color: #1582dd;
+  min-width: 3.1em;
+  display: inline-block;
+}
+.dieng-activity {
+  margin-left: 0.7em;
+}
+.dieng-fasilitas {
+  color: #1e365b;
+  font-size: 1.06rem;
+  padding-left: 0.2em;
+}
+.dieng-fasilitas li {
+  margin-bottom: 0.38rem;
+}
+.dieng-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.03rem;
+  margin-top: 0.4rem;
+}
+.dieng-table th, .dieng-table td {
+  border: 1px solid #e4eaf4;
+  padding: 0.49em 0.68em;
+  text-align: left;
+}
+.dieng-table th {
+  background: #f6f8fa;
+  color: #27539f;
+  font-weight: 700;
+}
+@media (max-width: 820px) {
+  .dieng-cardgrid { flex-direction: column; gap: 1.3rem; }
+  .dieng-card { max-width: 100%; }
+}
+</style>
