@@ -1,3 +1,4 @@
+src/content/blog/hello-world.md
 ---
 title: "Hello World"
 date: "2025-07-09"
