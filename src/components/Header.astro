@@ -1,30 +1,106 @@
 ---
-import Logo from '../components/Logo.astro';
-
+const logoUrl = "https://cdn-sdotid.adg.id/images/987b7a2d-55b1-4db4-bd8c-87dee40ec0f8_980x980.png";
 const navItems = [
     { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
+    { linkText: 'Paket 1 Hari', href: 'https://www.putratour.com/paket-wisata-dieng/1-hari/' },
+    { linkText: 'Paket 2 Hari', href: 'https://www.putratour.com/paket-wisata-dieng/2-hari/' },
+    { linkText: 'Paket 3 Hari', href: 'https://www.putratour.com/paket-wisata-dieng/3-hari/' },
+    { linkText: 'Jeep Dieng', href: 'https://www.putratour.com/paket-wisata-dieng/paket-jeep-dieng/' },
 ];
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-        <Logo />
+<nav class="dieng-navbar">
+  <div class="dieng-navbar-inner">
+    <a href="/" class="dieng-logo-link" aria-label="Beranda Paket Wisata Dieng">
+      <img src={logoUrl} alt="Logo Paket Dieng" class="dieng-logo-img" width="46" height="46" />
+      <span class="dieng-logo-text">Paket Dieng</span>
     </a>
-    {
-        !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
-                {navItems.map((item) => (
-                    <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                            {item.linkText}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
+    <ul class="dieng-nav-list">
+      {navItems.map((item) => (
+        <li>
+          <a href={item.href} class="dieng-nav-link" target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener' : undefined}>
+            {item.linkText}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
 </nav>
+
+<style>
+.dieng-navbar {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: #fff;
+  box-shadow: 0 2px 12px #00204a09;
+  border-bottom: 1.5px solid #eff3f8;
+  position: relative;
+  z-index: 10;
+}
+.dieng-navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.dieng-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.78rem;
+  text-decoration: none;
+}
+.dieng-logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #2761c420;
+  border: 1.5px solid #e4ebf7;
+  background: #fff;
+}
+.dieng-logo-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #253257;
+  letter-spacing: -0.01em;
+  font-family: 'Inter', sans-serif;
+}
+.dieng-nav-list {
+  display: flex;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dieng-nav-link {
+  color: #21519c;
+  font-weight: 600;
+  font-size: 1.07rem;
+  padding: 0.28em 1.2em;
+  border-radius: 1.1em;
+  text-decoration: none;
+  transition: background .13s, color .13s;
+}
+.dieng-nav-link:hover {
+  background: #f0f6ff;
+  color: #199d68;
+}
+@media (max-width: 700px) {
+  .dieng-navbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding: 0 1vw;
+  }
+  .dieng-nav-list {
+    flex-wrap: wrap;
+    gap: 0.3rem 0.8rem;
+    justify-content: flex-start;
+  }
+  .dieng-logo-text {
+    font-size: 1.09rem;
+  }
+}
+</style>
