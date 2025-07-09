@@ -68,9 +68,11 @@ const waLink = "https://wa.me/628112828283";
     </div>
   </section>
 
-  <section class="py-12 max-w-3xl mx-auto">
-    <h2 class="text-xl font-bold mb-4 text-center text-[#1a2341]">Kenapa Pilih Paket Dieng di Putra Tour?</h2>
-    <ul class="list-inside list-disc text-[#222] leading-7 mb-8 px-4 font-medium">
+  <section class="py-12 max-w-3xl mx-auto alasan-section">
+    <h2 class="text-xl font-bold mb-4 text-center alasan-title">
+      Kenapa Pilih Paket Dieng di Putra Tour?
+    </h2>
+    <ul class="list-inside list-disc alasan-list leading-7 mb-8 px-4 font-medium">
       <li>Rute fleksibel, penjemputan dari kota asal atau meeting point Dieng</li>
       <li>Harga transparan, tanpa biaya tersembunyi</li>
       <li>Pendamping profesional, ramah, dan berpengalaman</li>
@@ -168,13 +170,29 @@ const waLink = "https://wa.me/628112828283";
   font-size: 1.08rem;
   box-shadow: 0 2px 18px #ffe59450;
   transition: 0.18s;
+  text-decoration: underline;
 }
 .btn-about:hover {
   background: #27539f;
   color: #fff;
 }
+.alasan-section {
+  background: rgba(28,36,52,0.96);
+  border-radius: 18px;
+  padding: 2.3rem 1.4rem;
+}
+.alasan-title {
+  color: #ffe76a;
+  text-shadow: 0 2px 18px #18181860;
+}
+.alasan-list {
+  color: #fff !important;
+  text-shadow: 0 2px 12px #1a2341a6, 0 1px 2px #0009;
+  font-size: 1.09rem;
+}
 @media (max-width: 820px) {
   .flex-wrap { flex-direction: column; gap: 2rem; }
   .paket-card { max-width: 100%; min-width: 0; }
+  .alasan-section { padding: 1.4rem 0.8rem; }
 }
 </style>
