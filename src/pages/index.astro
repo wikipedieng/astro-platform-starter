@@ -1,34 +1,105 @@
 ---
-import Layout from '../layouts/Layout.astro'; // Atau sesuaikan path layout kamu
-import ContextAlert from '../components/ContextAlert.astro'; // Kalau tidak pakai, hapus saja
-import Markdown from '../components/Markdown.astro'; // Kalau tidak pakai, hapus saja
-
-const explainer = `
-**Nikmati Liburan Tak Terlupakan di Dieng Bersama Kami!**
-
-Temukan pesona alam Dieng: sunrise di Sikunir, Candi Arjuna, Kawah Sikidang, Telaga Warna, dan berbagai destinasi menarik lainnya.  
-Pilihan *open trip* & *private trip*, harga bersahabat, fasilitas lengkap, dan didampingi tim profesional yang ramah.  
-
-**Rute Populer:**
-- Sunrise Sikunir & Telaga Cebong  
-- Candi Arjuna & Kawah Sikidang  
-- Batu Ratapan Angin & Telaga Warna  
-- Jeep Adventure, Camping, dan banyak lagi!
-
-✨ Cocok untuk keluarga, bestie, gathering, dan solo traveler.  
-Yuk, wujudkan impianmu explore Dieng sekarang!
-
-[Klik di sini untuk konsultasi & booking via WhatsApp](https://wa.me/628112828283)
-`;
+import Layout from '../layouts/Layout.astro';
+const siteTitle = "Paket Wisata Dieng – Liburan Lengkap & Harga Terbaik | Putra Tour";
+const siteDesc = "Paket wisata Dieng terbaik: open trip & private trip, fasilitas lengkap, harga bersahabat. Sunrise Sikunir, Candi Arjuna, Kawah Sikidang, Jeep Adventure, dan lainnya. Reservasi di Putra Tour!";
+const siteUrl = "https://paketwisatadieng.netlify.app/";
+const putraTourUrl = "https://www.putratour.com/";
+const waLink = "https://wa.me/628112828283";
 ---
 
+<head>
+  <title>{siteTitle}</title>
+  <meta name="description" content={siteDesc} />
+  <link rel="canonical" href={siteUrl} />
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={siteDesc} />
+  <meta property="og:url" content={siteUrl} />
+  <meta property="og:type" content="website" />
+</head>
+
 <Layout title="Paket Wisata Dieng">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10 text-primary">Paket Wisata Dieng</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://wa.me/628112828283" class="btn btn-lg sm:min-w-64" target="_blank" rel="noopener">
-            Konsultasi & Booking WhatsApp
-        </a>
+  <section class="hero py-12 text-center">
+    <h1 class="text-4xl font-bold mb-3">Paket Wisata Dieng</h1>
+    <p class="text-lg text-gray-700 mb-5 max-w-xl mx-auto">
+      Liburan ke Dieng dengan rute dan fasilitas terlengkap!  
+      Dapatkan pengalaman sunrise Sikunir, jelajah kawah, candi, telaga, Jeep adventure, hingga paket keluarga & group, bersama <a href={putraTourUrl} target="_blank" rel="noopener" class="underline text-blue-700 font-semibold">Putra Tour</a>.
     </p>
+    <a href={waLink} target="_blank" rel="noopener" class="btn btn-lg bg-green-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-700 transition">
+      Konsultasi & Booking WhatsApp
+    </a>
+  </section>
+
+  <section class="py-10 bg-gray-50">
+    <h2 class="text-2xl font-bold text-center mb-8">Pilihan Paket & Fasilitas</h2>
+    <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-xs flex-1 min-w-[250px]">
+        <h3 class="font-bold text-lg mb-2 text-primary">One Day Trip Dieng</h3>
+        <ul class="mb-3 list-disc list-inside text-gray-700">
+          <li>Sunrise Sikunir & Telaga Cebong</li>
+          <li>Candi Arjuna & Kawah Sikidang</li>
+          <li>Batu Ratapan Angin</li>
+          <li>Kuliner & oleh-oleh</li>
+        </ul>
+        <div class="mb-3 text-sm text-gray-500">Mulai <span class="font-bold text-green-600">Rp 750.000/pax</span></div>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-block mt-2 btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Tanya Jadwal & Harga
+        </a>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-xs flex-1 min-w-[250px]">
+        <h3 class="font-bold text-lg mb-2 text-primary">2 Hari 1 Malam</h3>
+        <ul class="mb-3 list-disc list-inside text-gray-700">
+          <li>Pilihan Sunrise atau Wisata Reguler</li>
+          <li>Penginapan nyaman (villa/homestay)</li>
+          <li>Tour guide & dokumentasi</li>
+          <li>Fasilitas makan 3x & transportasi</li>
+        </ul>
+        <div class="mb-3 text-sm text-gray-500">Mulai <span class="font-bold text-green-600">Rp 1.250.000/pax</span></div>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-block mt-2 btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Booking 2D1N
+        </a>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-6 max-w-xs flex-1 min-w-[250px]">
+        <h3 class="font-bold text-lg mb-2 text-primary">Custom & Group</h3>
+        <ul class="mb-3 list-disc list-inside text-gray-700">
+          <li>Paket keluarga, gathering, outing kantor</li>
+          <li>Rute & fasilitas sesuai permintaan</li>
+          <li>Paket Jeep Adventure/Offroad</li>
+          <li>Bisa start Wonosobo, Purwokerto, Jogja, Semarang</li>
+        </ul>
+        <div class="mb-3 text-sm text-gray-500">Konsultasi gratis</div>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-block mt-2 btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Custom Trip
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 max-w-3xl mx-auto">
+    <h2 class="text-xl font-bold mb-4 text-center">Kenapa Pilih Paket Dieng di Putra Tour?</h2>
+    <ul class="list-inside list-disc text-gray-700 leading-7 mb-8 px-4">
+      <li>Rute fleksibel, penjemputan dari kota asal atau meeting point Dieng</li>
+      <li>Harga transparan, tanpa biaya tersembunyi</li>
+      <li>Pendamping profesional, ramah, dan berpengalaman</li>
+      <li>Gratis konsultasi itinerary dan request custom trip</li>
+      <li>Paket lengkap: transportasi, penginapan, tiket wisata, makan, guide, dokumentasi</li>
+    </ul>
+    <div class="text-center">
+      <a href={putraTourUrl} target="_blank" rel="noopener" class="inline-block btn bg-yellow-500 text-white font-semibold px-5 py-2 rounded hover:bg-yellow-600">
+        Lihat Website Resmi Putra Tour
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500 border-t mt-12">
+    © {new Date().getFullYear()} Paket Wisata Dieng by <a href={putraTourUrl} target="_blank" rel="noopener" class="underline text-blue-700">Putra Tour</a>
+  </footer>
 </Layout>
+
+<style>
+.btn {
+  transition: background 0.15s, box-shadow 0.15s;
+  font-weight: 600;
+}
+.text-primary { color: #27539f; }
+.bg-primary { background: #27539f; }
+</style>
