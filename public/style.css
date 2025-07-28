@@ -243,14 +243,14 @@ body {
 .seasonal h1 {
   margin: 0 0 13px 0;
   font-size: 2.5rem;
-  color: #413e32;
+  color: #111111;
   font-weight: 800;
   letter-spacing: .2px;
 }
 .seasonal h2 {
   margin: 0 0 18px 0;
   font-size: 1.6rem;
-  color: #695F4C;
+  color: #111111;
   font-weight: 700;
 }
 .seasonal h3 {
@@ -266,7 +266,7 @@ body {
 .seasonal p {
   font-size: 1.07rem;
   margin-bottom: 13px;
-  color: #3d3731;
+  color: #111111;
   line-height: 1.7;
 }
 .seasonal .more a {
@@ -319,13 +319,13 @@ body {
 /* Footer */
 .footer {
   padding: 19px 0;
-  background: #f6f3ed;
+  background: #003b95;
   text-align: center;
   font-size: 1.07rem;
-  color: #877857;
+  color: #ffffff;
 }
 .footer a {
-  color: #695F4C;
+  color: #ffffff;
   text-decoration: underline;
 }
 
