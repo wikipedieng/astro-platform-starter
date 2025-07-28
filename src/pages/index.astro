@@ -1,183 +1,187 @@
 ---
-import Layout from '../layouts/Layout.astro';
 const siteTitle = "Katalog Paket Wisata Dieng – Liburan Alam & Budaya | Pesonadieng.com";
 const siteDesc = "Jelajahi berbagai pilihan paket wisata ke Dataran Tinggi Dieng. Mulai dari 1 hingga 4 hari, tersedia rute dari Jogja, Solo, Semarang, dan kota lainnya. Pengalaman liburan menyatu dengan alam, budaya, dan ketenangan.";
 const siteUrl = "https://pesonadieng.com/";
 ---
 
-<head>
-  <title>{siteTitle}</title>
-  <meta name="description" content={siteDesc} />
-  <link rel="canonical" href={siteUrl} />
-  <meta property="og:title" content={siteTitle} />
-  <meta property="og:description" content={siteDesc} />
-  <meta property="og:url" content={siteUrl} />
-  <meta property="og:type" content="website" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #fcfcfc;
-      color: #1a1a1a;
-      line-height: 1.7;
-    }
-    header {
-      padding: 1.5rem;
-      background: #ffffff;
-      border-bottom: 1px solid #e0e0e0;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin: 0;
-      color: #19335a;
-    }
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    .intro {
-      font-size: 1.1rem;
-      color: #2e3a59;
-      margin-bottom: 2.5rem;
-      text-align: center;
-    }
-    .paket-section {
-      margin-bottom: 3rem;
-      padding: 2rem;
-      background: #ffffff;
-      border-radius: 1rem;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-    }
-    .paket-section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #1a2341;
-    }
-    .paket-section ul {
-      margin-top: 1rem;
-      padding-left: 1.2rem;
-    }
-    .paket-section ul li {
-      margin-bottom: 0.5rem;
-    }
-    .paket-price {
-      font-weight: bold;
-      color: #159347;
-      margin-top: 1rem;
-    }
-    .paket-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      background: #155bd5;
-      color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 0.6rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .faq-section {
-      background: #f9fafb;
-      padding: 2rem;
-      border-radius: 1rem;
-    }
-    .faq-section h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1.2rem;
-      color: #1a2341;
-    }
-    .faq-section h3 {
-      font-weight: 600;
-      margin-top: 1.5rem;
-    }
-    .faq-section p {
-      margin-top: 0.3rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      padding: 2rem 1rem;
-      color: #888;
-      border-top: 1px solid #eaeaea;
-    }
-  </style>
-</head>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{siteTitle}</title>
+    <meta name="description" content={siteDesc} />
+    <link rel="canonical" href={siteUrl} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDesc} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #fcfcfc;
+        color: #1a1a1a;
+        line-height: 1.7;
+      }
+      header {
+        padding: 1.5rem;
+        background: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      }
+      header h1 {
+        font-size: 2rem;
+        margin: 0;
+        color: #19335a;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+      .intro {
+        font-size: 1.1rem;
+        color: #2e3a59;
+        margin-bottom: 2.5rem;
+        text-align: center;
+      }
+      .paket-section {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      }
+      .paket-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #1a2341;
+      }
+      .paket-section ul {
+        margin-top: 1rem;
+        padding-left: 1.2rem;
+      }
+      .paket-section ul li {
+        margin-bottom: 0.5rem;
+      }
+      .paket-price {
+        font-weight: bold;
+        color: #159347;
+        margin-top: 1rem;
+      }
+      .paket-btn {
+        display: inline-block;
+        margin-top: 1rem;
+        background: #155bd5;
+        color: white;
+        padding: 0.6rem 1.4rem;
+        border-radius: 0.6rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .faq-section {
+        background: #f9fafb;
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+      .faq-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+        color: #1a2341;
+      }
+      .faq-section h3 {
+        font-weight: 600;
+        margin-top: 1.5rem;
+      }
+      .faq-section p {
+        margin-top: 0.3rem;
+      }
+      footer {
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 2rem 1rem;
+        color: #888;
+        border-top: 1px solid #eaeaea;
+        background: #f8f9fb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Katalog Paket Wisata Dieng</h1>
+    </header>
+    <main>
+      <p class="intro">
+        Temukan berbagai pilihan paket wisata ke Dieng Plateau. Semua paket telah dirancang untuk memberikan pengalaman wisata terbaik, dengan rute fleksibel dan fasilitas lengkap.
+      </p>
 
-<Layout title="Katalog Paket Wisata Dieng">
-  <header>
-    <h1>Katalog Paket Wisata Dieng</h1>
-  </header>
-  <main>
-    <p class="intro">
-      Temukan berbagai pilihan paket wisata ke Dieng Plateau. Semua paket telah dirancang untuk memberikan pengalaman wisata terbaik, dengan rute fleksibel dan fasilitas lengkap.
-    </p>
+      <section class="paket-section">
+        <h2>Paket Wisata Dieng 1 Hari</h2>
+        <p>Paket cepat satu hari cocok bagi Anda yang ingin liburan singkat tanpa menginap. Penjemputan dari Jogja, Wonosobo, atau Semarang. Destinasi utama seperti Telaga Warna, Kawah Sikidang, Sunrise Sikunir, dan Candi Arjuna.</p>
+        <ul>
+          <li>Durasi ±12–14 jam</li>
+          <li>Termasuk transportasi, makan siang, tiket masuk</li>
+          <li>Guide lokal dan dokumentasi basic</li>
+        </ul>
+        <div class="paket-price">Harga mulai Rp 750.000/pax</div>
+        <a href="/paket-dieng-1-hari" class="paket-btn">Lihat Detail</a>
+      </section>
 
-    <section class="paket-section">
-      <h2>Paket Wisata Dieng 1 Hari</h2>
-      <p>Paket cepat satu hari cocok bagi Anda yang ingin liburan singkat tanpa menginap. Penjemputan dari Jogja, Wonosobo, atau Semarang. Destinasi utama seperti Telaga Warna, Kawah Sikidang, Sunrise Sikunir, dan Candi Arjuna.</p>
-      <ul>
-        <li>Durasi ±12–14 jam</li>
-        <li>Termasuk transportasi, makan siang, tiket masuk</li>
-        <li>Guide lokal dan dokumentasi basic</li>
-      </ul>
-      <div class="paket-price">Harga mulai Rp 750.000/pax</div>
-      <a href="/paket-dieng-1-hari" class="paket-btn">Lihat Detail</a>
-    </section>
+      <section class="paket-section">
+        <h2>Paket Wisata Dieng 2 Hari 1 Malam</h2>
+        <p>Untuk Anda yang ingin menikmati udara dingin Dieng dan suasana malam yang khas. Menginap 1 malam di homestay atau villa. Kunjungan lengkap ke objek wisata favorit dan sunrise Sikunir.</p>
+        <ul>
+          <li>Termasuk penginapan, 3x makan, tiket wisata</li>
+          <li>Rute bebas pilih (kawah, candi, telaga, sunrise)</li>
+          <li>Cocok untuk pasangan, keluarga, dan small group</li>
+        </ul>
+        <div class="paket-price">Harga mulai Rp 1.250.000/pax</div>
+        <a href="/paket-dieng-2-hari-1-malam" class="paket-btn">Lihat Detail</a>
+      </section>
 
-    <section class="paket-section">
-      <h2>Paket Wisata Dieng 2 Hari 1 Malam</h2>
-      <p>Untuk Anda yang ingin menikmati udara dingin Dieng dan suasana malam yang khas. Menginap 1 malam di homestay atau villa. Kunjungan lengkap ke objek wisata favorit dan sunrise Sikunir.</p>
-      <ul>
-        <li>Termasuk penginapan, 3x makan, tiket wisata</li>
-        <li>Rute bebas pilih (kawah, candi, telaga, sunrise)</li>
-        <li>Cocok untuk pasangan, keluarga, dan small group</li>
-      </ul>
-      <div class="paket-price">Harga mulai Rp 1.250.000/pax</div>
-      <a href="/paket-dieng-2-hari-1-malam" class="paket-btn">Lihat Detail</a>
-    </section>
+      <section class="paket-section">
+        <h2>Paket Wisata Dieng 3 Hari 2 Malam</h2>
+        <p>Pilihan terbaik bagi Anda yang ingin eksplorasi lebih dalam. Waktu lebih longgar, banyak spot, kuliner lokal, dan bisa ditambah aktivitas Jeep Adventure atau dokumentasi profesional.</p>
+        <ul>
+          <li>Inap 2 malam, pilihan rute luas & custom</li>
+          <li>Destinasi utama + tambahan (Batu Pandang, Telaga Dringo, Kebun Teh)</li>
+          <li>Bisa untuk trip keluarga, komunitas, atau dokumentasi pre-wedding</li>
+        </ul>
+        <div class="paket-price">Harga mulai Rp 1.950.000/pax</div>
+        <a href="/paket-dieng-3-hari-2-malam" class="paket-btn">Lihat Detail</a>
+      </section>
 
-    <section class="paket-section">
-      <h2>Paket Wisata Dieng 3 Hari 2 Malam</h2>
-      <p>Pilihan terbaik bagi Anda yang ingin eksplorasi lebih dalam. Waktu lebih longgar, banyak spot, kuliner lokal, dan bisa ditambah aktivitas Jeep Adventure atau dokumentasi profesional.</p>
-      <ul>
-        <li>Inap 2 malam, pilihan rute luas & custom</li>
-        <li>Destinasi utama + tambahan (Batu Pandang, Telaga Dringo, Kebun Teh)</li>
-        <li>Bisa untuk trip keluarga, komunitas, atau dokumentasi pre-wedding</li>
-      </ul>
-      <div class="paket-price">Harga mulai Rp 1.950.000/pax</div>
-      <a href="/paket-dieng-3-hari-2-malam" class="paket-btn">Lihat Detail</a>
-    </section>
+      <section class="paket-section">
+        <h2>Paket Wisata Dieng 4 Hari 3 Malam</h2>
+        <p>Liburan panjang dan menyeluruh. Rute bisa dibuat sangat fleksibel. Cocok untuk rombongan besar, instansi, dan pelajar. Waktu bebas lebih banyak dan cocok untuk slow travel.</p>
+        <ul>
+          <li>3 malam menginap, full transport & makan</li>
+          <li>Fasilitas lengkap dan waktu santai</li>
+          <li>Bisa request outbound, api unggun, mini gathering</li>
+        </ul>
+        <div class="paket-price">Harga mulai Rp 2.450.000/pax</div>
+        <a href="/paket-dieng-4-hari-3-malam" class="paket-btn">Lihat Detail</a>
+      </section>
 
-    <section class="paket-section">
-      <h2>Paket Wisata Dieng 4 Hari 3 Malam</h2>
-      <p>Liburan panjang dan menyeluruh. Rute bisa dibuat sangat fleksibel. Cocok untuk rombongan besar, instansi, dan pelajar. Waktu bebas lebih banyak dan cocok untuk slow travel.</p>
-      <ul>
-        <li>3 malam menginap, full transport & makan</li>
-        <li>Fasilitas lengkap dan waktu santai</li>
-        <li>Bisa request outbound, api unggun, mini gathering</li>
-      </ul>
-      <div class="paket-price">Harga mulai Rp 2.450.000/pax</div>
-      <a href="/paket-dieng-4-hari-3-malam" class="paket-btn">Lihat Detail</a>
-    </section>
+      <section class="faq-section">
+        <h2>Pertanyaan Umum</h2>
+        <h3>Apakah semua paket sudah termasuk tiket masuk dan makan?</h3>
+        <p>Ya, seluruh paket sudah termasuk tiket objek wisata utama dan makan sesuai durasi perjalanan.</p>
 
-    <section class="faq-section">
-      <h2>Pertanyaan Umum</h2>
-      <h3>Apakah semua paket sudah termasuk tiket masuk dan makan?</h3>
-      <p>Ya, seluruh paket sudah termasuk tiket objek wisata utama dan makan sesuai durasi perjalanan.</p>
+        <h3>Berangkat dari mana saja?</h3>
+        <p>Paket tersedia dengan penjemputan dari Jogja, Solo, Semarang, atau meeting point di Wonosobo.</p>
 
-      <h3>Berangkat dari mana saja?</h3>
-      <p>Paket tersedia dengan penjemputan dari Jogja, Solo, Semarang, atau meeting point di Wonosobo.</p>
+        <h3>Bisa request destinasi tertentu?</h3>
+        <p>Bisa. Anda dapat request rute khusus selama masih dalam area dan waktu memungkinkan.</p>
 
-      <h3>Bisa request destinasi tertentu?</h3>
-      <p>Bisa. Anda dapat request rute khusus selama masih dalam area dan waktu memungkinkan.</p>
+        <h3>Apa tersedia paket tanpa menginap?</h3>
+        <p>Tentu. Paket 1 hari tanpa inap bisa jadi pilihan efisien bagi Anda yang terbatas waktu.</p>
+      </section>
+    </main>
 
-      <h3>Apa tersedia paket tanpa menginap?</h3>
-      <p>Tentu. Paket 1 hari tanpa inap bisa jadi pilihan efisien bagi Anda yang terbatas waktu.</p>
-    </section>
-  </main>
-
-  <footer>
-    © {new Date().getFullYear()} Pesonadieng.com — Semua hak cipta dilindungi.
-  </footer>
-</Layout>
+    <footer>
+      © {new Date().getFullYear()} Pesonadieng.com — Semua hak cipta dilindungi.
+    </footer>
+  </body>
+</html>
