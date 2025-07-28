@@ -232,7 +232,7 @@ body {
 .categories a:hover { text-decoration: underline; }
 
 .seasonal {
-  background: #F9F7F3;
+  background: #F8F8FF;
   border-radius: 13px;
   padding: 26px 30px;
   color: var(--primary);
