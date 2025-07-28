@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://paketwisatadieng.netlify.app/sitemap.xml
