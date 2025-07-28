@@ -1,0 +1,153 @@
+---
+const pageTitle = "Paket Wisata Dieng 1 Hari – Sunrise & Eksplor Alam";
+const pageDesc = "Paket wisata 1 hari ke Dieng cocok untuk traveler yang ingin menikmati keindahan alam Dieng secara singkat namun padat. Penjemputan dari Jogja, Semarang, atau Wonosobo.";
+const pageUrl = "https://paketwisatadieng.netlify.app/paket-dieng-1-hari";
+---
+
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    <link rel="canonical" href={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:type" content="article" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        background: #fdfdfd;
+        color: #1a1a1a;
+      }
+      header {
+        background: #ffffff;
+        padding: 1.2rem 1.5rem;
+        border-bottom: 1px solid #eaeaea;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 1.8rem;
+        margin: 0;
+        color: #19335a;
+      }
+      main {
+        max-width: 720px;
+        margin: auto;
+        padding: 2rem 1.5rem;
+      }
+      section {
+        margin-bottom: 2.5rem;
+      }
+      h2 {
+        color: #1a2341;
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+      }
+      ul {
+        padding-left: 1.2rem;
+        margin-top: 0.5rem;
+      }
+      ul li {
+        margin-bottom: 0.4rem;
+      }
+      .highlight {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+      footer {
+        background: #f8f9fb;
+        padding: 2rem 1rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #888;
+        border-top: 1px solid #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Paket Wisata Dieng 1 Hari</h1>
+    </header>
+    <main>
+      <section>
+        <p>
+          Paket wisata 1 hari ini dirancang bagi Anda yang memiliki waktu terbatas, namun tetap ingin menikmati destinasi unggulan di Dataran Tinggi Dieng. Mulai pagi hari dan selesai sore, trip ini mencakup transportasi, tiket masuk, makan siang, dan pemandu lokal.
+        </p>
+      </section>
+
+      <section>
+        <h2>Rute & Destinasi</h2>
+        <ul>
+          <li>Sunrise di Bukit Sikunir & Telaga Cebong</li>
+          <li>Candi Arjuna dan Kompleks Candi Hindu</li>
+          <li>Kawah Sikidang – geowisata alami aktif</li>
+          <li>Telaga Warna & Batu Ratapan Angin</li>
+          <li>Waktu bebas di area Dieng Kulon</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Fasilitas Termasuk</h2>
+        <ul>
+          <li>Transportasi full AC dari Jogja/Semarang/Wonosobo</li>
+          <li>Tiket masuk semua objek wisata</li>
+          <li>1x makan siang lokal khas Dieng</li>
+          <li>Air mineral</li>
+          <li>Guide lokal ramah & informatif</li>
+          <li>Dokumentasi basic (grup)</li>
+        </ul>
+      </section>
+
+      <section class="highlight">
+        <strong>Harga Mulai:</strong> Rp 750.000/peserta (minimal 2 orang)
+      </section>
+
+      <section>
+        <h2>Siapa Cocok Mengikuti Paket Ini?</h2>
+        <p>
+          Paket ini cocok untuk wisatawan solo, pasangan, hingga keluarga kecil yang ingin eksplorasi alam tanpa harus bermalam. Anda bisa memanfaatkan akhir pekan untuk merasakan dinginnya Dieng dan pemandangan yang menakjubkan.
+        </p>
+      </section>
+
+      <section>
+        <h2>Jadwal Perjalanan (Estimasi)</h2>
+        <ul>
+          <li>03.00 – Penjemputan di kota asal (Jogja/Semarang/Wonosobo)</li>
+          <li>04.30 – Sunrise di Sikunir</li>
+          <li>07.00 – Sarapan ringan & lanjut ke Candi Arjuna</li>
+          <li>09.30 – Kawah Sikidang</li>
+          <li>11.30 – Telaga Warna & Batu Pandang</li>
+          <li>13.00 – Makan siang</li>
+          <li>14.00 – Free time di sekitar Dieng</li>
+          <li>15.30 – Kembali ke kota asal</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Catatan Penting</h2>
+        <ul>
+          <li>Jadwal fleksibel sesuai kondisi lalu lintas & cuaca</li>
+          <li>Dianjurkan memakai jaket tebal & sepatu grip</li>
+          <li>Trip tetap jalan walau mendung (tidak hujan deras)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Pemesanan & Info</h2>
+        <p>Silakan hubungi tim kami via WhatsApp untuk ketersediaan tanggal dan konfirmasi harga terbaru:</p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/628112828283">+62 811-2828-283</a></p>
+      </section>
+    </main>
+    <footer>
+      © {new Date().getFullYear()} Paket Wisata Dieng — Halaman Paket 1 Hari
+    </footer>
+  </body>
+</html>
