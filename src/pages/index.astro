@@ -1,10 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const siteTitle = "Paket Wisata Dieng – Liburan Lengkap & Harga Terbaik | Putra Tour";
-const siteDesc = "Paket wisata Dieng terbaik: open trip & private trip, fasilitas lengkap, harga bersahabat. Sunrise Sikunir, Candi Arjuna, Kawah Sikidang, Jeep Adventure, dan lainnya. Reservasi di Putra Tour!";
-const siteUrl = "https://paketwisatadieng.netlify.app/";
-const putraTourUrl = "https://www.putratour.com/";
-const waLink = "https://wa.me/628112828283";
+const siteTitle = "Katalog Paket Wisata Dieng – Liburan Alam & Budaya | Pesonadieng.com";
+const siteDesc = "Jelajahi berbagai pilihan paket wisata ke Dataran Tinggi Dieng. Mulai dari 1 hingga 4 hari, tersedia rute dari Jogja, Solo, Semarang, dan kota lainnya. Pengalaman liburan menyatu dengan alam, budaya, dan ketenangan.";
+const siteUrl = "https://pesonadieng.com/";
 ---
 
 <head>
@@ -17,182 +15,84 @@ const waLink = "https://wa.me/628112828283";
   <meta property="og:type" content="website" />
 </head>
 
-<Layout title="Paket Wisata Dieng">
-  <section class="hero py-12 text-center bg-gradient-to-b from-blue-100 via-white to-gray-100">
-    <h1 class="text-4xl font-extrabold mb-3 text-[#1a2341] drop-shadow-sm">Paket Wisata Dieng</h1>
-    <p class="text-lg text-[#232a37] font-medium mb-5 max-w-2xl mx-auto drop-shadow">
-      Liburan ke Dieng dengan rute dan fasilitas terlengkap!  
-      Dapatkan pengalaman sunrise Sikunir, jelajah kawah, candi, telaga, Jeep adventure, hingga paket keluarga & group, bersama <a href={putraTourUrl} target="_blank" rel="noopener" class="underline text-blue-800 font-semibold hover:text-yellow-500">Putra Tour</a>.
+<Layout title="Katalog Paket Wisata Dieng">
+  <section class="hero py-12 text-center bg-gradient-to-b from-blue-50 via-white to-gray-50">
+    <h1 class="text-4xl font-extrabold mb-3 text-[#1a2341] drop-shadow-sm">Katalog Paket Wisata Dieng</h1>
+    <p class="text-lg text-[#2a3144] font-medium mb-5 max-w-2xl mx-auto drop-shadow">
+      Temukan pilihan paket liburan ke kawasan Dieng sesuai kebutuhan Anda. Tersedia rute perjalanan dari berbagai kota dengan durasi fleksibel, cocok untuk solo traveler, keluarga, hingga rombongan.
     </p>
-    <a href={waLink} target="_blank" rel="noopener" class="btn-hero">
-      Konsultasi & Booking WhatsApp
-    </a>
   </section>
 
-  <section class="py-10 bg-gray-50">
-    <h2 class="text-2xl font-bold text-center mb-8 text-[#1a2341]">Pilihan Paket & Fasilitas</h2>
-    <div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
-      <div class="paket-card">
-        <h3 class="paket-title">One Day Trip Dieng</h3>
-        <ul class="paket-list">
-          <li>Sunrise Sikunir & Telaga Cebong</li>
-          <li>Candi Arjuna & Kawah Sikidang</li>
-          <li>Batu Ratapan Angin</li>
-          <li>Kuliner & oleh-oleh</li>
-        </ul>
-        <div class="paket-harga">Mulai <span class="harga">Rp 750.000/pax</span></div>
-        <a href={waLink} target="_blank" rel="noopener" class="paket-btn">Tanya Jadwal & Harga</a>
-      </div>
-      <div class="paket-card">
-        <h3 class="paket-title">2 Hari 1 Malam</h3>
-        <ul class="paket-list">
-          <li>Pilihan Sunrise atau Wisata Reguler</li>
-          <li>Penginapan nyaman (villa/homestay)</li>
-          <li>Tour guide & dokumentasi</li>
-          <li>Fasilitas makan 3x & transportasi</li>
-        </ul>
-        <div class="paket-harga">Mulai <span class="harga">Rp 1.250.000/pax</span></div>
-        <a href={waLink} target="_blank" rel="noopener" class="paket-btn">Booking 2D1N</a>
-      </div>
-      <div class="paket-card">
-        <h3 class="paket-title">Custom & Group</h3>
-        <ul class="paket-list">
-          <li>Paket keluarga, gathering, outing kantor</li>
-          <li>Rute & fasilitas sesuai permintaan</li>
-          <li>Paket Jeep Adventure/Offroad</li>
-          <li>Bisa start Wonosobo, Purwokerto, Jogja, Semarang</li>
-        </ul>
-        <div class="paket-harga">Konsultasi gratis</div>
-        <a href={waLink} target="_blank" rel="noopener" class="paket-btn">Custom Trip</a>
-      </div>
-    </div>
+  <section class="py-10 bg-white">
+    <h2 class="text-2xl font-bold text-center mb-8 text-[#1a2341]">Paket Berdasarkan Durasi</h2>
+
+    <article class="max-w-4xl mx-auto mb-14">
+      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 1 Hari</h3>
+      <p class="mb-3">Paket satu hari ke Dieng cocok untuk Anda yang ingin menikmati keindahan alam dalam waktu singkat. Biasanya dimulai pagi-pagi dari Jogja, Wonosobo, atau Semarang dan kembali di malam hari. Destinasi utama meliputi Sunrise Sikunir, Telaga Warna, Kawah Sikidang, dan Candi Arjuna. Paket ini termasuk kendaraan, makan siang, tiket masuk, dan pemandu.</p>
+      <ul class="list-disc list-inside mb-3">
+        <li>Start dari Jogja, Wonosobo, atau Semarang</li>
+        <li>Durasi sekitar 12–14 jam</li>
+        <li>Termasuk transportasi, tiket, makan, dan guide</li>
+      </ul>
+      <p class="text-green-700 font-semibold">Harga mulai Rp 750.000/pax</p>
+      <a href="/paket-dieng-1-hari" class="paket-btn">Lihat Detail Paket</a>
+    </article>
+
+    <article class="max-w-4xl mx-auto mb-14">
+      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 2 Hari 1 Malam</h3>
+      <p class="mb-3">Dengan durasi dua hari, Anda dapat menikmati pengalaman wisata yang lebih santai dan lengkap. Hari pertama diisi dengan destinasi utama seperti Batu Pandang, Candi Arjuna, dan Kawah Sikidang. Hari kedua biasanya diawali dengan Sunrise Sikunir dan Telaga Cebong. Akomodasi tersedia dalam bentuk homestay atau villa sesuai preferensi peserta.</p>
+      <ul class="list-disc list-inside mb-3">
+        <li>1 malam menginap di Dieng (homestay/villa)</li>
+        <li>Transportasi, makan 3 kali, tiket semua objek wisata</li>
+        <li>Guide dan dokumentasi dasar sudah termasuk</li>
+      </ul>
+      <p class="text-green-700 font-semibold">Harga mulai Rp 1.250.000/pax</p>
+      <a href="/paket-dieng-2-hari-1-malam" class="paket-btn">Lihat Detail Paket</a>
+    </article>
+
+    <article class="max-w-4xl mx-auto mb-14">
+      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 3 Hari 2 Malam</h3>
+      <p class="mb-3">Paket ini menawarkan eksplorasi yang lebih luas, cocok bagi wisatawan yang ingin merasakan suasana Dieng secara mendalam. Selain destinasi utama, biasanya ditambah aktivitas seperti Jeep Adventure, kuliner malam di Wonosobo, dan waktu bebas untuk hunting foto. Paket sudah termasuk penginapan 2 malam dan fasilitas lengkap.</p>
+      <ul class="list-disc list-inside mb-3">
+        <li>Rute fleksibel dan pilihan aktivitas lebih banyak</li>
+        <li>Termasuk Jeep Dieng & kuliner lokal</li>
+        <li>Transportasi, makan, tiket wisata, akomodasi, guide</li>
+      </ul>
+      <p class="text-green-700 font-semibold">Harga mulai Rp 1.950.000/pax</p>
+      <a href="/paket-dieng-3-hari-2-malam" class="paket-btn">Lihat Detail Paket</a>
+    </article>
+
+    <article class="max-w-4xl mx-auto">
+      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 4 Hari 3 Malam</h3>
+      <p class="mb-3">Ideal untuk instansi, komunitas, atau rombongan besar. Waktu yang lebih panjang membuat wisatawan bisa menikmati setiap titik dengan nyaman. Biasanya ditambah kegiatan outbound ringan, waktu bebas, serta kunjungan ke tempat-tempat alternatif seperti Telaga Menjer, Bukit Scooter, dan Museum Kailasa.</p>
+      <ul class="list-disc list-inside mb-3">
+        <li>Cocok untuk group besar & corporate</li>
+        <li>Rute bisa disesuaikan sesuai kebutuhan</li>
+        <li>Termasuk semua fasilitas standar + bonus aktivitas</li>
+      </ul>
+      <p class="text-green-700 font-semibold">Harga mulai Rp 2.450.000/pax</p>
+      <a href="/paket-dieng-4-hari-3-malam" class="paket-btn">Lihat Detail Paket</a>
+    </article>
   </section>
 
-  <section class="py-12 max-w-3xl mx-auto alasan-section">
-    <h2 class="text-xl font-bold mb-4 text-center alasan-title">
-      Kenapa Pilih Paket Dieng di Putra Tour?
-    </h2>
-    <ul class="list-inside list-disc alasan-list leading-7 mb-8 px-4 font-medium">
-      <li>Rute fleksibel, penjemputan dari kota asal atau meeting point Dieng</li>
-      <li>Harga transparan, tanpa biaya tersembunyi</li>
-      <li>Pendamping profesional, ramah, dan berpengalaman</li>
-      <li>Gratis konsultasi itinerary dan request custom trip</li>
-      <li>Paket lengkap: transportasi, penginapan, tiket wisata, makan, guide, dokumentasi</li>
-    </ul>
-    <div class="text-center">
-      <a href={putraTourUrl} target="_blank" rel="noopener" class="inline-block btn-about">
-        Lihat Website Resmi Putra Tour
-      </a>
+  <section class="py-12 max-w-3xl mx-auto">
+    <h2 class="text-xl font-bold mb-6 text-center text-[#1a2341]">Pertanyaan Umum seputar Paket Dieng</h2>
+    <div class="faq">
+      <h3>Apa saja yang biasanya termasuk dalam paket wisata Dieng?</h3>
+      <p>Umumnya sudah mencakup transportasi, tiket masuk, makan, penginapan (jika lebih dari 1 hari), dan pemandu.</p>
+
+      <h3>Dari kota mana saja bisa berangkat ke Dieng?</h3>
+      <p>Paket tersedia dengan keberangkatan dari Jogja, Solo, Semarang, Purwokerto, dan meeting point di Wonosobo.</p>
+
+      <h3>Apakah bisa request destinasi dalam paket?</h3>
+      <p>Bisa, selama masih dalam area dan waktu memungkinkan, penyesuaian rute bisa dilakukan saat reservasi.</p>
+
+      <h3>Apakah bisa ikut tanpa menginap?</h3>
+      <p>Tentu. Paket 1 hari tersedia untuk yang ingin menikmati Dieng tanpa bermalam, dengan rute yang padat dan efektif.</p>
     </div>
   </section>
 
   <footer class="py-6 text-center text-sm text-gray-600 border-t mt-12 bg-white">
-    © {new Date().getFullYear()} Paket Wisata Dieng by <a href={putraTourUrl} target="_blank" rel="noopener" class="underline text-blue-700">Putra Tour</a>
+    © {new Date().getFullYear()} Pesonadieng.com
   </footer>
 </Layout>
-
-<style>
-.hero {
-  background: linear-gradient(100deg, #e9f3ff 0%, #f6fbff 100%);
-}
-.text-primary { color: #27539f; }
-.bg-primary { background: #27539f; }
-.btn-hero {
-  background: linear-gradient(90deg, #199d68, #1b8ed4);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 2rem;
-  padding: 0.85rem 2.5rem;
-  font-size: 1.12rem;
-  box-shadow: 0 4px 24px #2761c320;
-  transition: 0.2s;
-  display: inline-block;
-}
-.btn-hero:hover {
-  background: linear-gradient(90deg, #1b8ed4, #199d68);
-  box-shadow: 0 8px 32px #2761c370;
-}
-.paket-card {
-  background: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 3px 24px 0 #b8c9e822;
-  padding: 2.3rem 1.5rem 1.4rem 1.5rem;
-  text-align: left;
-  min-width: 270px;
-  max-width: 320px;
-  flex: 1 1 0;
-  border: 1px solid #e8f0fc;
-  color: #1a2341;
-}
-.paket-title {
-  color: #155bd5;
-  font-weight: 700;
-  font-size: 1.22rem;
-  margin-bottom: 0.65rem;
-  letter-spacing: 0.01em;
-}
-.paket-list {
-  margin-bottom: 1.1rem;
-  padding-left: 1.2rem;
-  color: #263259;
-}
-.paket-harga {
-  margin-bottom: 0.9rem;
-  color: #444;
-  font-size: 0.97rem;
-}
-.harga {
-  color: #159347;
-  font-weight: 700;
-  font-size: 1.1em;
-}
-.paket-btn {
-  background: #155bd5;
-  color: #fff;
-  padding: 0.65rem 1.4rem;
-  border-radius: 1.2rem;
-  font-weight: 600;
-  box-shadow: 0 2px 12px #155bd523;
-  transition: 0.16s;
-  display: inline-block;
-  font-size: 1rem;
-}
-.paket-btn:hover {
-  background: #159347;
-  color: #fff;
-}
-.btn-about {
-  background: #ffc100;
-  color: #253257;
-  font-weight: 700;
-  border-radius: 2rem;
-  padding: 0.68rem 2.2rem;
-  font-size: 1.08rem;
-  box-shadow: 0 2px 18px #ffe59450;
-  transition: 0.18s;
-  text-decoration: underline;
-}
-.btn-about:hover {
-  background: #27539f;
-  color: #fff;
-}
-.alasan-section {
-  background: rgba(28,36,52,0.96);
-  border-radius: 18px;
-  padding: 2.3rem 1.4rem;
-}
-.alasan-title {
-  color: #ffe76a;
-  text-shadow: 0 2px 18px #18181860;
-}
-.alasan-list {
-  color: #fff !important;
-  text-shadow: 0 2px 12px #1a2341a6, 0 1px 2px #0009;
-  font-size: 1.09rem;
-}
-@media (max-width: 820px) {
-  .flex-wrap { flex-direction: column; gap: 2rem; }
-  .paket-card { max-width: 100%; min-width: 0; }
-  .alasan-section { padding: 1.4rem 0.8rem; }
-}
-</style>
