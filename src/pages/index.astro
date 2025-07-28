@@ -13,86 +13,171 @@ const siteUrl = "https://pesonadieng.com/";
   <meta property="og:description" content={siteDesc} />
   <meta property="og:url" content={siteUrl} />
   <meta property="og:type" content="website" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fcfcfc;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    header {
+      padding: 1.5rem;
+      background: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #19335a;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .intro {
+      font-size: 1.1rem;
+      color: #2e3a59;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+    .paket-section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+    .paket-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1a2341;
+    }
+    .paket-section ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+    .paket-section ul li {
+      margin-bottom: 0.5rem;
+    }
+    .paket-price {
+      font-weight: bold;
+      color: #159347;
+      margin-top: 1rem;
+    }
+    .paket-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #155bd5;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .faq-section {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .faq-section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      color: #1a2341;
+    }
+    .faq-section h3 {
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    .faq-section p {
+      margin-top: 0.3rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 2rem 1rem;
+      color: #888;
+      border-top: 1px solid #eaeaea;
+    }
+  </style>
 </head>
 
 <Layout title="Katalog Paket Wisata Dieng">
-  <section class="hero py-12 text-center bg-gradient-to-b from-blue-50 via-white to-gray-50">
-    <h1 class="text-4xl font-extrabold mb-3 text-[#1a2341] drop-shadow-sm">Katalog Paket Wisata Dieng</h1>
-    <p class="text-lg text-[#2a3144] font-medium mb-5 max-w-2xl mx-auto drop-shadow">
-      Temukan pilihan paket liburan ke kawasan Dieng sesuai kebutuhan Anda. Tersedia rute perjalanan dari berbagai kota dengan durasi fleksibel, cocok untuk solo traveler, keluarga, hingga rombongan.
+  <header>
+    <h1>Katalog Paket Wisata Dieng</h1>
+  </header>
+  <main>
+    <p class="intro">
+      Temukan berbagai pilihan paket wisata ke Dieng Plateau. Semua paket telah dirancang untuk memberikan pengalaman wisata terbaik, dengan rute fleksibel dan fasilitas lengkap.
     </p>
-  </section>
 
-  <section class="py-10 bg-white">
-    <h2 class="text-2xl font-bold text-center mb-8 text-[#1a2341]">Paket Berdasarkan Durasi</h2>
-
-    <article class="max-w-4xl mx-auto mb-14">
-      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 1 Hari</h3>
-      <p class="mb-3">Paket satu hari ke Dieng cocok untuk Anda yang ingin menikmati keindahan alam dalam waktu singkat. Biasanya dimulai pagi-pagi dari Jogja, Wonosobo, atau Semarang dan kembali di malam hari. Destinasi utama meliputi Sunrise Sikunir, Telaga Warna, Kawah Sikidang, dan Candi Arjuna. Paket ini termasuk kendaraan, makan siang, tiket masuk, dan pemandu.</p>
-      <ul class="list-disc list-inside mb-3">
-        <li>Start dari Jogja, Wonosobo, atau Semarang</li>
-        <li>Durasi sekitar 12–14 jam</li>
-        <li>Termasuk transportasi, tiket, makan, dan guide</li>
+    <section class="paket-section">
+      <h2>Paket Wisata Dieng 1 Hari</h2>
+      <p>Paket cepat satu hari cocok bagi Anda yang ingin liburan singkat tanpa menginap. Penjemputan dari Jogja, Wonosobo, atau Semarang. Destinasi utama seperti Telaga Warna, Kawah Sikidang, Sunrise Sikunir, dan Candi Arjuna.</p>
+      <ul>
+        <li>Durasi ±12–14 jam</li>
+        <li>Termasuk transportasi, makan siang, tiket masuk</li>
+        <li>Guide lokal dan dokumentasi basic</li>
       </ul>
-      <p class="text-green-700 font-semibold">Harga mulai Rp 750.000/pax</p>
-      <a href="/paket-dieng-1-hari" class="paket-btn">Lihat Detail Paket</a>
-    </article>
+      <div class="paket-price">Harga mulai Rp 750.000/pax</div>
+      <a href="/paket-dieng-1-hari" class="paket-btn">Lihat Detail</a>
+    </section>
 
-    <article class="max-w-4xl mx-auto mb-14">
-      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 2 Hari 1 Malam</h3>
-      <p class="mb-3">Dengan durasi dua hari, Anda dapat menikmati pengalaman wisata yang lebih santai dan lengkap. Hari pertama diisi dengan destinasi utama seperti Batu Pandang, Candi Arjuna, dan Kawah Sikidang. Hari kedua biasanya diawali dengan Sunrise Sikunir dan Telaga Cebong. Akomodasi tersedia dalam bentuk homestay atau villa sesuai preferensi peserta.</p>
-      <ul class="list-disc list-inside mb-3">
-        <li>1 malam menginap di Dieng (homestay/villa)</li>
-        <li>Transportasi, makan 3 kali, tiket semua objek wisata</li>
-        <li>Guide dan dokumentasi dasar sudah termasuk</li>
+    <section class="paket-section">
+      <h2>Paket Wisata Dieng 2 Hari 1 Malam</h2>
+      <p>Untuk Anda yang ingin menikmati udara dingin Dieng dan suasana malam yang khas. Menginap 1 malam di homestay atau villa. Kunjungan lengkap ke objek wisata favorit dan sunrise Sikunir.</p>
+      <ul>
+        <li>Termasuk penginapan, 3x makan, tiket wisata</li>
+        <li>Rute bebas pilih (kawah, candi, telaga, sunrise)</li>
+        <li>Cocok untuk pasangan, keluarga, dan small group</li>
       </ul>
-      <p class="text-green-700 font-semibold">Harga mulai Rp 1.250.000/pax</p>
-      <a href="/paket-dieng-2-hari-1-malam" class="paket-btn">Lihat Detail Paket</a>
-    </article>
+      <div class="paket-price">Harga mulai Rp 1.250.000/pax</div>
+      <a href="/paket-dieng-2-hari-1-malam" class="paket-btn">Lihat Detail</a>
+    </section>
 
-    <article class="max-w-4xl mx-auto mb-14">
-      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 3 Hari 2 Malam</h3>
-      <p class="mb-3">Paket ini menawarkan eksplorasi yang lebih luas, cocok bagi wisatawan yang ingin merasakan suasana Dieng secara mendalam. Selain destinasi utama, biasanya ditambah aktivitas seperti Jeep Adventure, kuliner malam di Wonosobo, dan waktu bebas untuk hunting foto. Paket sudah termasuk penginapan 2 malam dan fasilitas lengkap.</p>
-      <ul class="list-disc list-inside mb-3">
-        <li>Rute fleksibel dan pilihan aktivitas lebih banyak</li>
-        <li>Termasuk Jeep Dieng & kuliner lokal</li>
-        <li>Transportasi, makan, tiket wisata, akomodasi, guide</li>
+    <section class="paket-section">
+      <h2>Paket Wisata Dieng 3 Hari 2 Malam</h2>
+      <p>Pilihan terbaik bagi Anda yang ingin eksplorasi lebih dalam. Waktu lebih longgar, banyak spot, kuliner lokal, dan bisa ditambah aktivitas Jeep Adventure atau dokumentasi profesional.</p>
+      <ul>
+        <li>Inap 2 malam, pilihan rute luas & custom</li>
+        <li>Destinasi utama + tambahan (Batu Pandang, Telaga Dringo, Kebun Teh)</li>
+        <li>Bisa untuk trip keluarga, komunitas, atau dokumentasi pre-wedding</li>
       </ul>
-      <p class="text-green-700 font-semibold">Harga mulai Rp 1.950.000/pax</p>
-      <a href="/paket-dieng-3-hari-2-malam" class="paket-btn">Lihat Detail Paket</a>
-    </article>
+      <div class="paket-price">Harga mulai Rp 1.950.000/pax</div>
+      <a href="/paket-dieng-3-hari-2-malam" class="paket-btn">Lihat Detail</a>
+    </section>
 
-    <article class="max-w-4xl mx-auto">
-      <h3 class="text-xl font-bold text-[#1a2341] mb-2">Paket Wisata Dieng 4 Hari 3 Malam</h3>
-      <p class="mb-3">Ideal untuk instansi, komunitas, atau rombongan besar. Waktu yang lebih panjang membuat wisatawan bisa menikmati setiap titik dengan nyaman. Biasanya ditambah kegiatan outbound ringan, waktu bebas, serta kunjungan ke tempat-tempat alternatif seperti Telaga Menjer, Bukit Scooter, dan Museum Kailasa.</p>
-      <ul class="list-disc list-inside mb-3">
-        <li>Cocok untuk group besar & corporate</li>
-        <li>Rute bisa disesuaikan sesuai kebutuhan</li>
-        <li>Termasuk semua fasilitas standar + bonus aktivitas</li>
+    <section class="paket-section">
+      <h2>Paket Wisata Dieng 4 Hari 3 Malam</h2>
+      <p>Liburan panjang dan menyeluruh. Rute bisa dibuat sangat fleksibel. Cocok untuk rombongan besar, instansi, dan pelajar. Waktu bebas lebih banyak dan cocok untuk slow travel.</p>
+      <ul>
+        <li>3 malam menginap, full transport & makan</li>
+        <li>Fasilitas lengkap dan waktu santai</li>
+        <li>Bisa request outbound, api unggun, mini gathering</li>
       </ul>
-      <p class="text-green-700 font-semibold">Harga mulai Rp 2.450.000/pax</p>
-      <a href="/paket-dieng-4-hari-3-malam" class="paket-btn">Lihat Detail Paket</a>
-    </article>
-  </section>
+      <div class="paket-price">Harga mulai Rp 2.450.000/pax</div>
+      <a href="/paket-dieng-4-hari-3-malam" class="paket-btn">Lihat Detail</a>
+    </section>
 
-  <section class="py-12 max-w-3xl mx-auto">
-    <h2 class="text-xl font-bold mb-6 text-center text-[#1a2341]">Pertanyaan Umum seputar Paket Dieng</h2>
-    <div class="faq">
-      <h3>Apa saja yang biasanya termasuk dalam paket wisata Dieng?</h3>
-      <p>Umumnya sudah mencakup transportasi, tiket masuk, makan, penginapan (jika lebih dari 1 hari), dan pemandu.</p>
+    <section class="faq-section">
+      <h2>Pertanyaan Umum</h2>
+      <h3>Apakah semua paket sudah termasuk tiket masuk dan makan?</h3>
+      <p>Ya, seluruh paket sudah termasuk tiket objek wisata utama dan makan sesuai durasi perjalanan.</p>
 
-      <h3>Dari kota mana saja bisa berangkat ke Dieng?</h3>
-      <p>Paket tersedia dengan keberangkatan dari Jogja, Solo, Semarang, Purwokerto, dan meeting point di Wonosobo.</p>
+      <h3>Berangkat dari mana saja?</h3>
+      <p>Paket tersedia dengan penjemputan dari Jogja, Solo, Semarang, atau meeting point di Wonosobo.</p>
 
-      <h3>Apakah bisa request destinasi dalam paket?</h3>
-      <p>Bisa, selama masih dalam area dan waktu memungkinkan, penyesuaian rute bisa dilakukan saat reservasi.</p>
+      <h3>Bisa request destinasi tertentu?</h3>
+      <p>Bisa. Anda dapat request rute khusus selama masih dalam area dan waktu memungkinkan.</p>
 
-      <h3>Apakah bisa ikut tanpa menginap?</h3>
-      <p>Tentu. Paket 1 hari tersedia untuk yang ingin menikmati Dieng tanpa bermalam, dengan rute yang padat dan efektif.</p>
-    </div>
-  </section>
+      <h3>Apa tersedia paket tanpa menginap?</h3>
+      <p>Tentu. Paket 1 hari tanpa inap bisa jadi pilihan efisien bagi Anda yang terbatas waktu.</p>
+    </section>
+  </main>
 
-  <footer class="py-6 text-center text-sm text-gray-600 border-t mt-12 bg-white">
-    © {new Date().getFullYear()} Pesonadieng.com
+  <footer>
+    © {new Date().getFullYear()} Pesonadieng.com — Semua hak cipta dilindungi.
   </footer>
 </Layout>
