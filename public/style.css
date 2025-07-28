@@ -1,0 +1,416 @@
+/*!
+ * ======================================================================
+ *  Paket Wisata Dieng Official CSS
+ *  Website   : https://paketwisatatourdieng.com/
+ *  Brand     : Paket Wisata Dieng
+ *  Developer : PaketWisataTourDieng.com Team
+ *  Kontak    : info@paketwisatatourdieng.com
+ *  Copyright : © 2025 PaketWisataTourDieng.com - All Rights Reserved
+ *  License   : Hanya untuk proyek resmi dan partner Paket Wisata Dieng.
+ *              Tidak untuk dijual ulang. Hubungi tim untuk kolaborasi.
+ * ----------------------------------------------------------------------
+ *  Deskripsi:
+ *      Custom CSS profesional untuk brand Paket Wisata Dieng.
+ *      - Clean, modern, mobile-first, responsif, SEO-friendly
+ *      - Layout ringan & nyaman dibaca, anti lebay/ndeso
+ *      - Warna & style konsisten branding Dieng (natural, elegan, eksklusif)
+ *      - Siap untuk HTML, WordPress, Netlify, Vercel, dll
+ *
+ *  Color Palette:
+ *      --primary: #695F4C   (Coklat natural, profesional)
+ *      --accent : #FFA405   (Emas-oranye, premium)
+ *      --nav    : #4B5360   (Biru gelap pegunungan)
+ *      --cat    : #847A67   (Olive earth Dieng)
+ *      --muted  : #D9D1BC   (Beige kalem)
+ *      --bg     : #fff      (Putih bersih)
+ *      --shadow : 0 2px 8px rgba(50, 45, 30, 0.05)
+ *
+ *  Style Notes:
+ *      - Card, FAQ, tombol, dan navigasi sudah support branding
+ *      - Font utama: Segoe UI (fallback: Arial, sans-serif)
+ *      - Struktur class tidak akan bentrok selama unik di project ini
+ *      - Efek interaksi smooth, tidak mengganggu SEO
+ *      - Siap custom ulang jika ada section/komponen tambahan
+ *
+ *  SEO/UX Notes:
+ *      - Responsive untuk semua device
+ *      - Aman untuk performance, Core Web Vitals friendly
+ *      - Clean, tidak tabrakan dengan plugin lain (asal class unik)
+ *      - Class bisa diubah ke prefix (misal: .dieng-xxx) kalau mau 100% unik
+ *
+ *  File Name   : style.css
+ *  Version     : 1.0.0
+ *  Last Update : 2025-07-22
+ * ======================================================================
+ */
+
+/* ====== CSS Start ====== */
+
+.faq {
+  background: #f7f9fa;
+  border-radius: 14px;
+  padding: 24px 20px;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 14px rgba(40,60,90,0.06);
+  max-width: 650px;
+}
+.faq h3 {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #18325c;
+}
+.faq p {
+  margin: 0 0 1.2em 0;
+  font-size: 1em;
+  color: #444f63;
+}
+
+:root {
+  --primary: #695F4C;
+  --bg: #fff;
+  --accent: #FFA405;
+  --muted: #D9D1BC;
+  --nav: #4B5360;
+  --cat: #847A67;
+  --shadow: 0 2px 8px rgba(50, 45, 30, 0.05);
+}
+
+html { font-size: 16px; }
+body {
+  padding: 0; margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f6f2;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 32px auto 0 auto;
+  background: var(--bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+
+/* Header */
+.header {
+  background: var(--muted);
+  padding: 32px 40px 16px 40px;
+  text-align: left;
+}
+
+/* Logo + Icon */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.semar-icon {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  background: none;
+}
+.logo .brand {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #19335a;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+.logo p {
+  margin: 2px 0 0 0;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.13rem;
+}
+
+/* Navigation */
+.nav {
+  background: var(--nav);
+  padding: 0 24px;
+}
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 26px;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  list-style: none;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.07rem;
+  transition: color .18s;
+  padding: 16px 0;
+  display: inline-block;
+}
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* GALLERY CARDS - 2 kolom desktop, 1 kolom hp */
+.gallery-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 28px 0 20px 0;
+
+}
+.gallery-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  transition: box-shadow .17s;
+  border: 1.5px solid #ece4da;
+}
+.gallery-card:hover {
+  box-shadow: 0 6px 24px rgba(120, 90, 50, 0.10);
+  border-color: var(--accent);
+}
+.gallery-card img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  display: block;
+  background: #eee9dc;
+}
+.gallery-card-content {
+  padding: 18px 18px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-card-content h3 {
+  font-size: 1.29rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--nav);
+  letter-spacing: 0.2px;
+}
+.gallery-card-content p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  color: #695F4C;
+  flex: 1;
+  line-height: 1.55;
+}
+.btn-gallery {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-size: 1.04rem;
+  font-weight: 600;
+  box-shadow: 0 1.5px 7px rgba(100,70,40,0.04);
+  transition: background .16s;
+  align-self: flex-start;
+}
+.btn-gallery:hover {
+  background: var(--nav);
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  padding: 38px 40px 18px 40px;
+  align-items: start;
+}
+.categories {
+  background: var(--cat);
+  border-radius: 13px;
+  padding: 20px 18px 20px 28px;
+  color: #fff;
+}
+.categories h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+}
+.categories ul {
+  padding: 0;
+  margin: 0;
+}
+.categories li {
+  list-style: none;
+  margin: 0 0 10px 0;
+  font-size: 1.07rem;
+  padding-left: 0;
+  position: relative;
+  line-height: 1.7;
+}
+.categories li:before {
+  content: "•";
+  color: var(--accent);
+  margin-right: 10px;
+  font-size: 1.08em;
+}
+.categories a {
+  color: #fff;
+  text-decoration: none;
+}
+.categories a:hover { text-decoration: underline; }
+
+.seasonal {
+  background: #F9F7F3;
+  border-radius: 13px;
+  padding: 26px 30px;
+  color: var(--primary);
+  min-width: 220px;
+  max-width: 700px;
+  box-shadow: 0 2px 6px rgba(100,60,30,0.02);
+}
+.seasonal h1 {
+  margin: 0 0 13px 0;
+  font-size: 2.5rem;
+  color: #413e32;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.seasonal h2 {
+  margin: 0 0 18px 0;
+  font-size: 1.6rem;
+  color: #695F4C;
+  font-weight: 700;
+}
+.seasonal h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.seasonal h4 {
+  font-size: 1.07rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.seasonal p {
+  font-size: 1.07rem;
+  margin-bottom: 13px;
+  color: #3d3731;
+  line-height: 1.7;
+}
+.seasonal .more a {
+  color: #fff;
+  background: var(--cat);
+  padding: 9px 26px;
+  border-radius: 6px;
+  font-size: 1.07rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s;
+}
+.seasonal .more a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Seasons Footer */
+.seasons {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #f7f6f2;
+  padding: 22px 40px 20px 40px;
+  gap: 22px;
+  border-top: 1px solid #ece8df;
+}
+.season-card {
+  flex: 1;
+  background: #e9e5dc;
+  border-radius: 13px;
+  text-align: center;
+  padding: 36px 0 18px 0;
+  margin: 0 4px;
+  box-shadow: 0 1px 8px rgba(100,60,30,0.07);
+}
+.season-name {
+  display: block;
+  font-size: 1.07rem;
+  font-weight: bold;
+  color: #333;
+}
+.season-year {
+  display: block;
+  font-size: 1.07rem;
+  color: #877857;
+  margin-top: 7px;
+}
+
+/* Footer */
+.footer {
+  padding: 19px 0;
+  background: #f6f3ed;
+  text-align: center;
+  font-size: 1.07rem;
+  color: #877857;
+}
+.footer a {
+  color: #695F4C;
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVE PATCH --- */
+@media (max-width: 1140px) {
+  .wrapper { border-radius: 0; margin: 0; }
+  .main-content, .seasons { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 900px) {
+  .main-content { grid-template-columns: 1fr; gap: 22px; }
+  .categories, .seasonal { max-width: unset; min-width: unset; }
+  .categories { margin-bottom: 18px; }
+  .gallery-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 16px 0 10px 0;
+  }
+}
+@media (max-width: 700px) {
+  html { font-size: 15px; }
+  .header { padding: 18px 6vw 10px 6vw; }
+  .logo .brand,
+  .seasonal h1 { font-size: 1.6rem; }
+  .seasonal h2,
+  .categories h2 { font-size: 1.2rem; }
+  .seasonal h3 { font-size: 1rem; }
+  .seasonal h4 { font-size: 0.98rem; }
+  .seasonal p,
+  .categories li,
+  .season-card .season-name,
+  .season-card .season-year,
+  .nav a,
+  .footer { font-size: 1rem; }
+  .main-content { padding: 14px 2vw 10px 2vw; }
+  .semar-icon { width: 36px; height: 36px; }
+  .logo { gap: 8px; }
+}
+@media (max-width: 430px) {
+  .header, .main-content, .seasons { padding-left: 2vw; padding-right: 2vw; }
+  .logo .brand { font-size: 1.2rem; }
+  .seasonal h1 { font-size: 1rem; }
+}
