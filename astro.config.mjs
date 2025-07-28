@@ -2,13 +2,12 @@ import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astro/sitemap'; // Menambahkan plugin sitemap
 
 export default defineConfig({
-    site: 'https://paketwisatadieng.netlify.app',  // Pastikan ini domain yang benar
+    site: 'https://paketwisatadieng.netlify.app',  // Domain sudah benar
     vite: {
         plugins: [tailwindcss()]
     },
-    integrations: [react(), sitemap()], // Menambahkan sitemap sebagai integration
+    integrations: [react()], // sitemap dihapus karena error
     adapter: netlify()
 });
