@@ -1,0 +1,20 @@
+---
+// src/layouts/BaseLayout.astro
+const { title = 'Paket Wisata Dieng', description = 'Paket liburan ke Dataran Tinggi Dieng dengan destinasi lengkap dan harga fleksibel.' } = Astro.props;
+---
+
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url.href} />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="/style.css" />
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
