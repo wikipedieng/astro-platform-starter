@@ -1,66 +1,56 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import CategorySidebar from '../components/CategorySidebar.astro';
 import Footer from '../components/Footer.astro';
+
+const title = 'Kebijakan Privasi – Paket Wisata Dieng';
+const description = 'Kebijakan privasi situs Paket Wisata Dieng. Menjelaskan bagaimana data pengunjung dan informasi pribadi digunakan dan dilindungi.';
 ---
 
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kebijakan Privasi – Paket Wisata Dieng</title>
-    <meta name="description" content="Kebijakan privasi situs Paket Wisata Dieng. Menjelaskan bagaimana data pengunjung dan informasi pribadi digunakan dan dilindungi." />
-    <link rel="canonical" href="https://paketwisatadieng.netlify.app/privasi" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
 
-  <body>
-    <div class="wrapper">
-      <Header />
-      <Navigation />
+  <main class="main-content">
+    <CategorySidebar />
 
-      <main class="main-content">
-        <CategorySidebar />
+    <section class="seasonal">
+      <h1>Kebijakan Privasi</h1>
+      <p>Halaman ini menjelaskan bagaimana kami mengelola, menyimpan, dan melindungi informasi pribadi yang diperoleh dari pengunjung situs maupun peserta perjalanan.</p>
 
-        <section class="seasonal">
-          <h1>Kebijakan Privasi</h1>
-          <p>Halaman ini menjelaskan bagaimana kami mengelola, menyimpan, dan melindungi informasi pribadi yang diperoleh dari pengunjung situs maupun peserta perjalanan.</p>
+      <h2>Informasi yang Kami Kumpulkan</h2>
+      <ul>
+        <li>Nama, alamat email, dan nomor telepon yang dikirimkan melalui formulir pemesanan atau konsultasi</li>
+        <li>Data teknis seperti alamat IP, jenis perangkat, dan perilaku penelusuran di situs</li>
+        <li>Preferensi perjalanan dan catatan komunikasi terkait layanan</li>
+      </ul>
 
-          <h2>Informasi yang Kami Kumpulkan</h2>
-          <ul>
-            <li>Nama, alamat email, dan nomor telepon yang dikirimkan melalui formulir pemesanan atau konsultasi</li>
-            <li>Data teknis seperti alamat IP, jenis perangkat, dan perilaku penelusuran di situs</li>
-            <li>Preferensi perjalanan dan catatan komunikasi terkait layanan</li>
-          </ul>
+      <h2>Penggunaan Informasi</h2>
+      <ul>
+        <li>Untuk memproses permintaan informasi atau pemesanan layanan</li>
+        <li>Untuk meningkatkan pengalaman pengguna dan menyesuaikan konten</li>
+        <li>Untuk kebutuhan administratif dan dokumentasi internal</li>
+        <li>Kami tidak menjual atau membagikan data pribadi kepada pihak ketiga tanpa izin</li>
+      </ul>
 
-          <h2>Penggunaan Informasi</h2>
-          <ul>
-            <li>Untuk memproses permintaan informasi atau pemesanan layanan</li>
-            <li>Untuk meningkatkan pengalaman pengguna dan menyesuaikan konten</li>
-            <li>Untuk kebutuhan administratif dan dokumentasi internal</li>
-            <li>Kami tidak menjual atau membagikan data pribadi kepada pihak ketiga tanpa izin</li>
-          </ul>
+      <h2>Perlindungan Data</h2>
+      <p>Kami menggunakan langkah-langkah pengamanan yang wajar secara teknis dan operasional untuk menjaga keamanan data yang dikumpulkan. Akses terhadap data terbatas pada pihak yang berwenang dan untuk tujuan layanan saja.</p>
 
-          <h2>Perlindungan Data</h2>
-          <p>Kami menggunakan langkah-langkah pengamanan yang wajar secara teknis dan operasional untuk menjaga keamanan data yang dikumpulkan. Akses terhadap data terbatas pada pihak yang berwenang dan untuk tujuan layanan saja.</p>
+      <h2>Cookie & Pelacakan</h2>
+      <p>Situs ini dapat menggunakan cookie untuk menyimpan preferensi pengguna dan menganalisis interaksi di halaman. Anda dapat mengatur preferensi cookie melalui pengaturan browser masing-masing.</p>
 
-          <h2>Cookie & Pelacakan</h2>
-          <p>Situs ini dapat menggunakan cookie untuk menyimpan preferensi pengguna dan menganalisis interaksi di halaman. Anda dapat mengatur preferensi cookie melalui pengaturan browser masing-masing.</p>
+      <h2>Tautan Eksternal</h2>
+      <p>Situs kami dapat memuat tautan ke halaman eksternal. Kami tidak bertanggung jawab atas kebijakan privasi situs lain di luar kendali kami.</p>
 
-          <h2>Tautan Eksternal</h2>
-          <p>Situs kami dapat memuat tautan ke halaman eksternal. Kami tidak bertanggung jawab atas kebijakan privasi situs lain di luar kendali kami.</p>
+      <h2>Perubahan Kebijakan</h2>
+      <p>Kami dapat memperbarui kebijakan ini sewaktu-waktu untuk menyesuaikan dengan regulasi atau perubahan operasional. Perubahan akan diumumkan secara jelas di halaman ini.</p>
 
-          <h2>Perubahan Kebijakan</h2>
-          <p>Kami dapat memperbarui kebijakan ini sewaktu-waktu untuk menyesuaikan dengan regulasi atau perubahan operasional. Perubahan akan diumumkan secara jelas di halaman ini.</p>
+      <h2>Kontak</h2>
+      <p>Jika Anda memiliki pertanyaan terkait kebijakan privasi ini, silakan hubungi kami melalui halaman <a href="/kontak">Kontak</a>.</p>
+    </section>
+  </main>
 
-          <h2>Kontak</h2>
-          <p>Jika Anda memiliki pertanyaan terkait kebijakan privasi ini, silakan hubungi kami melalui halaman <a href="/kontak">Kontak</a>.</p>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  </body>
-</html>
+  <Footer />
+</BaseLayout>
