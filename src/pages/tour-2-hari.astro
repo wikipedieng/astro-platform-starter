@@ -1,106 +1,96 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import CategorySidebar from '../components/CategorySidebar.astro';
 import Footer from '../components/Footer.astro';
+
+const title = 'Paket Wisata Dieng 2 Hari 1 Malam';
+const description = 'Paket wisata Dieng selama 2 hari 1 malam. Cocok untuk wisatawan yang ingin menjelajahi lebih banyak destinasi dengan waktu lebih leluasa dan akomodasi nyaman.';
 ---
 
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Paket Wisata Dieng 2 Hari 1 Malam</title>
-    <meta name="description" content="Paket wisata Dieng selama 2 hari 1 malam. Cocok untuk wisatawan yang ingin menjelajahi lebih banyak destinasi dengan waktu lebih leluasa dan akomodasi nyaman." />
-    <link rel="canonical" href="https://paketwisatadieng.netlify.app/tour-2-hari" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
 
-  <body>
-    <div class="wrapper">
-      <Header />
-      <Navigation />
+  <main class="main-content">
+    <CategorySidebar />
 
-      <main class="main-content">
-        <CategorySidebar />
+    <section class="seasonal">
+      <h1>Paket Wisata Dieng 2 Hari 1 Malam</h1>
+      <p>Paket ini ideal bagi wisatawan yang ingin menikmati suasana Dieng secara lebih mendalam. Dengan durasi dua hari satu malam, peserta memiliki cukup waktu untuk menjelajahi berbagai lokasi unggulan, beristirahat nyaman di penginapan lokal, dan menikmati makanan khas pegunungan. Cocok untuk keluarga, pasangan, maupun rombongan dari luar kota.</p>
 
-        <section class="seasonal">
-          <h1>Paket Wisata Dieng 2 Hari 1 Malam</h1>
-          <p>Paket ini ideal bagi wisatawan yang ingin menikmati suasana Dieng secara lebih mendalam. Dengan durasi dua hari satu malam, peserta memiliki cukup waktu untuk menjelajahi berbagai lokasi unggulan, beristirahat nyaman di penginapan lokal, dan menikmati makanan khas pegunungan. Cocok untuk keluarga, pasangan, maupun rombongan dari luar kota.</p>
+      <h2>Fasilitas Termasuk</h2>
+      <ul>
+        <li>Kendaraan</li>
+        <li>Penginapan 1 malam</li>
+        <li>Layanan makan 4x</li>
+        <li>Tiket masuk destinasi wisata</li>
+        <li>Driver</li>
+        <li>Tour guide</li>
+        <li>BBM</li>
+        <li>Parkir</li>
+        <li>Tol</li>
+        <li>Air mineral</li>
+      </ul>
 
-          <h2>Fasilitas Termasuk</h2>
-          <ul>
-            <li>Kendaraan</li>
-            <li>Penginapan 1 malam</li>
-            <li>Layanan makan 4x</li>
-            <li>Tiket masuk destinasi wisata</li>
-            <li>Driver</li>
-            <li>Tour guide</li>
-            <li>BBM</li>
-            <li>Parkir</li>
-            <li>Tol</li>
-            <li>Air mineral</li>
-          </ul>
+      <h2>Destinasi Wisata</h2>
+      <ul>
+        <li>Bukit Sikunir</li>
+        <li>Telaga Cebong</li>
+        <li>Kawah Sikidang</li>
+        <li>Komplek Candi Arjuna</li>
+        <li>Batu Ratapan Angin</li>
+        <li>Dieng Plateau Theater</li>
+        <li>Taman Pintu Langit</li>
+        <li>Telaga Menjer</li>
+        <li>Perkebunan Teh</li>
+        <li>Sentra Oleh-oleh dan Kuliner</li>
+      </ul>
 
-          <h2>Destinasi Wisata</h2>
-          <ul>
-            <li>Bukit Sikunir</li>
-            <li>Telaga Cebong</li>
-            <li>Kawah Sikidang</li>
-            <li>Komplek Candi Arjuna</li>
-            <li>Batu Ratapan Angin</li>
-            <li>Dieng Plateau Theater</li>
-            <li>Taman Pintu Langit</li>
-            <li>Telaga Menjer</li>
-            <li>Perkebunan Teh</li>
-            <li>Sentra Oleh-oleh dan Kuliner</li>
-          </ul>
+      <h2>Harga Paket (per peserta)</h2>
+      <p>Harga berlaku untuk keberangkatan privat, semakin banyak peserta, semakin hemat.</p>
+      <table>
+        <thead>
+          <tr><th>Jumlah Peserta</th><th>Harga / Orang</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1 orang</td><td>Rp4.500.000</td></tr>
+          <tr><td>2 orang</td><td>Rp2.250.000</td></tr>
+          <tr><td>3 orang</td><td>Rp1.550.000</td></tr>
+          <tr><td>4 orang</td><td>Rp1.250.000</td></tr>
+          <tr><td>5 orang</td><td>Rp1.225.000</td></tr>
+          <tr><td>6 orang</td><td>Rp1.200.000</td></tr>
+          <tr><td>7 orang</td><td>Rp1.550.000</td></tr>
+          <tr><td>8 orang</td><td>Rp1.500.000</td></tr>
+          <tr><td>9 orang</td><td>Rp1.450.000</td></tr>
+          <tr><td>10 orang</td><td>Rp1.350.000</td></tr>
+        </tbody>
+      </table>
 
-          <h2>Harga Paket (per peserta)</h2>
-          <p>Harga berlaku untuk keberangkatan privat, semakin banyak peserta, semakin hemat.</p>
-          <table>
-            <thead>
-              <tr><th>Jumlah Peserta</th><th>Harga / Orang</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>1 orang</td><td>Rp4.500.000</td></tr>
-              <tr><td>2 orang</td><td>Rp2.250.000</td></tr>
-              <tr><td>3 orang</td><td>Rp1.550.000</td></tr>
-              <tr><td>4 orang</td><td>Rp1.250.000</td></tr>
-              <tr><td>5 orang</td><td>Rp1.225.000</td></tr>
-              <tr><td>6 orang</td><td>Rp1.200.000</td></tr>
-              <tr><td>7 orang</td><td>Rp1.550.000</td></tr>
-              <tr><td>8 orang</td><td>Rp1.500.000</td></tr>
-              <tr><td>9 orang</td><td>Rp1.450.000</td></tr>
-              <tr><td>10 orang</td><td>Rp1.350.000</td></tr>
-            </tbody>
-          </table>
+      <h2>FAQ – Pertanyaan Umum</h2>
+      <h3>Apa bedanya paket 2 hari dengan yang 1 hari?</h3>
+      <p>Paket 2 hari memungkinkan Anda menjelajahi lebih banyak tempat dengan waktu lebih longgar, tanpa terburu-buru. Anda juga dapat menikmati suasana malam di Dieng.</p>
 
-          <h2>FAQ – Pertanyaan Umum</h2>
-          <h3>Apa bedanya paket 2 hari dengan yang 1 hari?</h3>
-          <p>Paket 2 hari memungkinkan Anda menjelajahi lebih banyak tempat dengan waktu lebih longgar, tanpa terburu-buru. Anda juga dapat menikmati suasana malam di Dieng.</p>
+      <h3>Apakah penginapan sudah termasuk?</h3>
+      <p>Ya. Kami menyediakan penginapan standar homestay, villa, atau guesthouse sesuai ketersediaan dan jumlah peserta.</p>
 
-          <h3>Apakah penginapan sudah termasuk?</h3>
-          <p>Ya. Kami menyediakan penginapan standar homestay, villa, atau guesthouse sesuai ketersediaan dan jumlah peserta.</p>
+      <h3>Apakah makan 4x mencakup semua waktu makan?</h3>
+      <p>Ya. Termasuk makan pagi, siang, malam di hari pertama dan sarapan di hari kedua. Bisa disesuaikan untuk vegetarian atau diet khusus.</p>
 
-          <h3>Apakah makan 4x mencakup semua waktu makan?</h3>
-          <p>Ya. Termasuk makan pagi, siang, malam di hari pertama dan sarapan di hari kedua. Bisa disesuaikan untuk vegetarian atau diet khusus.</p>
+      <h3>Apakah bisa bawa anak-anak?</h3>
+      <p>Bisa. Anak-anak di atas 5 tahun dihitung sebagai peserta. Untuk anak di bawah 5 tahun dapat dibicarakan terlebih dahulu.</p>
 
-          <h3>Apakah bisa bawa anak-anak?</h3>
-          <p>Bisa. Anak-anak di atas 5 tahun dihitung sebagai peserta. Untuk anak di bawah 5 tahun dapat dibicarakan terlebih dahulu.</p>
+      <h3>Apakah jadwal bisa disesuaikan?</h3>
+      <p>Bisa. Kami terbuka untuk permintaan khusus, baik itu destinasi tambahan maupun waktu keberangkatan.</p>
 
-          <h3>Apakah jadwal bisa disesuaikan?</h3>
-          <p>Bisa. Kami terbuka untuk permintaan khusus, baik itu destinasi tambahan maupun waktu keberangkatan.</p>
+      <h3>Apakah ada layanan penjemputan?</h3>
+      <p>Ada. Penjemputan tersedia dari kota-kota seperti Yogyakarta, Semarang, Solo, atau Purwokerto dengan penyesuaian harga dan waktu tempuh.</p>
 
-          <h3>Apakah ada layanan penjemputan?</h3>
-          <p>Ada. Penjemputan tersedia dari kota-kota seperti Yogyakarta, Semarang, Solo, atau Purwokerto dengan penyesuaian harga dan waktu tempuh.</p>
+      <h3>Apakah tersedia dokumentasi?</h3>
+      <p>Untuk paket 2 hari bisa kami bantu dokumentasi dasar (HP/DSLR) tanpa biaya tambahan. Dokumentasi profesional tersedia sebagai opsi tambahan.</p>
+    </section>
+  </main>
 
-          <h3>Apakah tersedia dokumentasi?</h3>
-          <p>Untuk paket 2 hari bisa kami bantu dokumentasi dasar (HP/DSLR) tanpa biaya tambahan. Dokumentasi profesional tersedia sebagai opsi tambahan.</p>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  </body>
-</html>
+  <Footer />
+</BaseLayout>
