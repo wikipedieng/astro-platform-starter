@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astro/sitemap'; // Menambahkan plugin sitemap
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,6 +10,6 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()]
     },
-    integrations: [react()],
+    integrations: [react(), sitemap()], // Menambahkan sitemap sebagai integration
     adapter: netlify()
 });
