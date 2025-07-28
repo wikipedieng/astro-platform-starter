@@ -2,8 +2,6 @@
 import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import CategorySidebar from '../components/CategorySidebar.astro';
-import SeasonalSection from '../components/SeasonalSection.astro';
-import FaqSection from '../components/FaqSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -11,16 +9,13 @@ import Footer from '../components/Footer.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Katalog Paket Wisata Dieng – Jelajahi Alam & Budaya Bersama Kami</title>
-    <meta name="description" content="Temukan berbagai pilihan paket wisata ke Dataran Tinggi Dieng hanya di paketwisatadieng.netlify.app. Mulai dari trip 1 hari, 2 hari 1 malam, hingga 4 hari 3 malam. Semua lengkap dan bisa disesuaikan!" />
+    <title>Paket Wisata Dieng | Liburan Cerdas ke Negeri di Atas Awan</title>
+    <meta name="description" content="Homepage resmi Paket Wisata Dieng. Jelajahi Dieng dengan trip berkualitas, pilihan durasi fleksibel, dan layanan lengkap. Booking sekarang, nikmati pengalaman berkesan di dataran tinggi terbaik Jawa." />
     <link rel="canonical" href="https://paketwisatadieng.netlify.app/" />
     <meta name="robots" content="index,follow" />
     <link rel="stylesheet" href="/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
   </head>
+
   <body>
     <div class="wrapper">
       <Header />
@@ -28,10 +23,48 @@ import Footer from '../components/Footer.astro';
 
       <main class="main-content">
         <CategorySidebar />
-        <SeasonalSection />
-      </main>
 
-      <FaqSection />
+        <section class="seasonal">
+          <h1>Selamat Datang di Pusat Paket Wisata Dieng</h1>
+          <p>Dataran Tinggi Dieng bukan sekadar destinasi — ia adalah kombinasi antara keindahan alam, kekayaan budaya, dan ketenangan yang tidak mudah ditemukan di tempat lain. Melalui halaman ini, Anda akan menemukan berbagai pilihan perjalanan ke Dieng yang telah dirancang dengan cermat dan penuh perhatian.</p>
+
+          <h2>Mengapa Memilih Dieng?</h2>
+          <p>Terletak di ketinggian lebih dari 2.000 mdpl, Dieng menawarkan udara sejuk, pemandangan spektakuler, dan sejarah spiritual yang mendalam. Dari kawah aktif hingga telaga warna-warni, setiap sudut Dieng menyimpan keajaiban alam yang memikat.</p>
+
+          <h2>Keunggulan Kami</h2>
+          <ul>
+            <li><strong>Itinerary fleksibel</strong> — bisa disesuaikan dengan kebutuhan Anda</li>
+            <li><strong>Transportasi nyaman</strong> — mobil wisata AC & driver berpengalaman</li>
+            <li><strong>Destinasi lengkap</strong> — sunrise, candi, kawah, telaga, hingga spot foto viral</li>
+            <li><strong>Harga bersaing</strong> — transparan, tanpa biaya tersembunyi</li>
+          </ul>
+
+          <h3>Opsi Perjalanan yang Tersedia</h3>
+          <ol>
+            <li>Trip Singkat 1 Hari – Cocok untuk liburan kilat dari kota sekitar</li>
+            <li>Tour 2 Hari 1 Malam – Inap di homestay lokal, itinerary padat</li>
+            <li>Travel 3–4 Hari – Eksplorasi mendalam, cocok untuk keluarga & komunitas</li>
+          </ol>
+
+          <h2>Paket Khusus & Layanan Tambahan</h2>
+          <p>Kami juga menyediakan layanan khusus seperti:</p>
+          <ul>
+            <li>Private trip dengan kendaraan pribadi</li>
+            <li>Custom tour sesuai minat (foto, spiritual, petualangan)</li>
+            <li>Trip rombongan sekolah, kantor, dan instansi</li>
+            <li>Open trip reguler dari Jogja, Semarang, Purwokerto, Solo</li>
+          </ul>
+
+          <h2>Komitmen Kami</h2>
+          <p>Setiap perjalanan Anda ke Dieng akan didampingi oleh tim lokal yang paham wilayah, ramah, dan siap memberikan pengalaman terbaik. Kami percaya bahwa liburan yang baik bukan hanya tentang tempat yang dikunjungi, tapi juga tentang bagaimana perjalanan itu dirasakan.</p>
+
+          <h2>Siap Merencanakan Perjalanan?</h2>
+          <p>
+            Klik tombol di bawah untuk berkonsultasi langsung dengan tim kami.<br />
+            <a href="/kontak.html" class="btn-gallery" style="margin-top:1em;display:inline-block;">Hubungi Kami via WhatsApp</a>
+          </p>
+        </section>
+      </main>
 
       <Footer />
     </div>
