@@ -4,7 +4,6 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astro/sitemap'; // Menambahkan plugin sitemap
 
-// https://astro.build/config
 export default defineConfig({
     site: 'https://paketwisatadieng.netlify.app',  // Pastikan ini domain yang benar
     vite: {
