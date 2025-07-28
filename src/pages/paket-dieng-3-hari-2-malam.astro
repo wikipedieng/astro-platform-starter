@@ -1,0 +1,82 @@
+---
+const siteTitle = "Paket Wisata Dieng 3 Hari 2 Malam – Jelajah Alam & Budaya | Paket Wisata Dieng";
+const siteDesc = "Paket wisata Dieng 3 hari 2 malam: perjalanan paling lengkap ke kawasan Dataran Tinggi Dieng. Termasuk sunrise, candi, kawah, jeep adventure, kuliner, dan akomodasi nyaman.";
+const siteUrl = "https://paketwisatadieng.netlify.app/paket-dieng-3-hari-2-malam";
+---
+
+<head>
+  <title>{siteTitle}</title>
+  <meta name="description" content={siteDesc} />
+  <link rel="canonical" href={siteUrl} />
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={siteDesc} />
+  <meta property="og:url" content={siteUrl} />
+  <meta property="og:type" content="website" />
+</head>
+
+<header class="py-6 px-4 border-b bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <a href="/" class="text-xl font-bold text-[#1a2341]">Paket Wisata Dieng</a>
+    <nav class="space-x-4 text-sm">
+      <a href="/tentang" class="hover:underline">Tentang</a>
+      <a href="/ketentuan" class="hover:underline">Ketentuan</a>
+      <a href="/privacy" class="hover:underline">Privasi</a>
+      <a href="/kontak" class="hover:underline">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<main class="px-4 py-10 max-w-4xl mx-auto">
+  <h1 class="text-3xl font-extrabold text-[#1a2341] mb-4">Paket Wisata Dieng 3 Hari 2 Malam</h1>
+  <p class="mb-6 text-lg text-gray-700">Paket eksplorasi terlengkap untuk menjelajahi pesona Dieng dengan lebih mendalam. Dirancang untuk Anda yang ingin merasakan semua sisi Dieng — dari keindahan alam, kekayaan budaya, hingga wisata jeep dan kuliner malam yang berkesan.</p>
+
+  <h2 class="text-2xl font-semibold text-[#1a2341] mt-10 mb-3">Itinerary (Fleksibel & Bisa Custom)</h2>
+  <ul class="list-disc list-inside mb-6">
+    <li><strong>Hari 1:</strong> Penjemputan – Telaga Menjer – Gardu Pandang – Candi Arjuna – Homestay</li>
+    <li><strong>Hari 2:</strong> Sunrise Sikunir – Telaga Cebong – Batu Pandang – Kawah Sikidang – Bukit Scooter</li>
+    <li><strong>Hari 3:</strong> Jeep Adventure – Telaga Warna – Museum Kailasa – Pusat Oleh-oleh – Kembali</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-[#1a2341] mt-10 mb-3">Fasilitas Termasuk</h2>
+  <ul class="list-disc list-inside mb-6">
+    <li>Transportasi full AC dari kota asal (Jogja/Semarang/Wonosobo)</li>
+    <li>Homestay/villa 2 malam di sekitar Dieng</li>
+    <li>Tiket masuk ke seluruh destinasi</li>
+    <li>2x sarapan, 3x makan siang, 2x makan malam</li>
+    <li>Jeep adventure dan driver lokal</li>
+    <li>Tour guide dan dokumentasi standar</li>
+    <li>Air mineral, parkir, tol, retribusi</li>
+  </ul>
+
+  <p class="text-green-700 font-semibold text-lg mb-6">Harga mulai <strong>Rp 1.950.000/pax</strong></p>
+  <a href="https://wa.me/628112828283" target="_blank" rel="noopener" class="inline-block bg-[#155bd5] text-white px-6 py-2 rounded-full font-semibold text-base shadow hover:bg-[#159347] transition">Booking Sekarang via WhatsApp</a>
+
+  <h2 class="text-2xl font-semibold text-[#1a2341] mt-14 mb-4">Pertanyaan Umum</h2>
+  <div class="faq space-y-4">
+    <div>
+      <h3 class="font-semibold">Apakah itinerary bisa diubah sesuai request?</h3>
+      <p>Ya, itinerary bersifat fleksibel dan bisa disesuaikan saat reservasi, selama masih dalam jangkauan dan waktu yang memungkinkan.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Apakah tersedia pilihan upgrade akomodasi?</h3>
+      <p>Bisa. Tersedia upgrade ke villa eksklusif atau hotel sesuai request dan ketersediaan.</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Minimal berapa orang untuk ikut paket ini?</h3>
+      <p>Paket tersedia untuk private maupun open trip. Minimal 2 orang untuk private trip.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="py-6 mt-16 bg-white border-t text-center text-sm text-gray-600">
+  © {new Date().getFullYear()} Paket Wisata Dieng · <a href="/privacy" class="underline">Kebijakan Privasi</a>
+</footer>
+
+<style>
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: #fdfdfd;
+    line-height: 1.7;
+    color: #2c3e50;
+  }
+</style>
