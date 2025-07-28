@@ -1,106 +1,22 @@
 ---
-const logoUrl = "https://cdn-sdotid.adg.id/images/987b7a2d-55b1-4db4-bd8c-87dee40ec0f8_980x980.png";
-const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Paket 1 Hari', href: '/onedaytour/' },
-    { linkText: 'Paket 2 Hari', href: 'https://www.putratour.com/paket-wisata-dieng/2-hari/' },
-    { linkText: 'Paket 3 Hari', href: 'https://www.putratour.com/paket-wisata-dieng/3-hari/' },
-    { linkText: 'Jeep Dieng', href: 'https://www.putratour.com/paket-wisata-dieng/paket-jeep-dieng/' },
-];
+// components/Header.astro
 ---
 
-<nav class="dieng-navbar">
-  <div class="dieng-navbar-inner">
-    <a href="/" class="dieng-logo-link" aria-label="Beranda Paket Wisata Dieng">
-      <img src={logoUrl} alt="Logo Paket Dieng" class="dieng-logo-img" width="46" height="46" />
-      <span class="dieng-logo-text">Paket Dieng</span>
-    </a>
-    <ul class="dieng-nav-list">
-      {navItems.map((item) => (
-        <li>
-          <a href={item.href} class="dieng-nav-link" target={item.href.startsWith('http') ? '_blank' : undefined} rel={item.href.startsWith('http') ? 'noopener' : undefined}>
-            {item.linkText}
-          </a>
-        </li>
-      ))}
-    </ul>
+<header class="header">
+  <div class="logo">
+    <span class="semar-icon" aria-label="Candi Arjuna Dieng">
+      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden="true" focusable="false">
+        <circle cx="22" cy="22" r="22" fill="#F7F5F0" />
+        <rect x="11" y="30" width="22" height="6" rx="2.2" fill="#a3865c" stroke="#6a4a26" stroke-width="1.2" />
+        <rect x="15" y="21" width="14" height="9" rx="2" fill="#cbb395" stroke="#6a4a26" stroke-width="1" />
+        <rect x="18" y="14" width="8" height="7" rx="1.2" fill="#f4e4c7" stroke="#6a4a26" stroke-width="1" />
+        <rect x="20.3" y="10.2" width="3.4" height="4.3" rx="1.1" fill="#e1c48e" stroke="#6a4a26" stroke-width="1" />
+        <rect x="21.5" y="7" width="1" height="4" rx="0.5" fill="#ad874c" />
+        <rect x="21" y="16.3" width="2" height="2.7" rx="0.6" fill="#a3865c" />
+        <rect x="16" y="36" width="12" height="2" rx="0.8" fill="#cfb289" />
+      </svg>
+    </span>
+    <span class="brand">Paket Wisata Dieng</span>
+    <p>Sejak 2012</p>
   </div>
-</nav>
-
-<style>
-.dieng-navbar {
-  width: 100%;
-  padding: 0.8rem 0;
-  background: #fff;
-  box-shadow: 0 2px 12px #00204a09;
-  border-bottom: 1.5px solid #eff3f8;
-  position: relative;
-  z-index: 10;
-}
-.dieng-navbar-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.2rem;
-}
-.dieng-logo-link {
-  display: flex;
-  align-items: center;
-  gap: 0.78rem;
-  text-decoration: none;
-}
-.dieng-logo-img {
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px #2761c420;
-  border: 1.5px solid #e4ebf7;
-  background: #fff;
-}
-.dieng-logo-text {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #253257;
-  letter-spacing: -0.01em;
-  font-family: 'Inter', sans-serif;
-}
-.dieng-nav-list {
-  display: flex;
-  gap: 1.1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.dieng-nav-link {
-  color: #21519c;
-  font-weight: 600;
-  font-size: 1.07rem;
-  padding: 0.28em 1.2em;
-  border-radius: 1.1em;
-  text-decoration: none;
-  transition: background .13s, color .13s;
-}
-.dieng-nav-link:hover {
-  background: #f0f6ff;
-  color: #199d68;
-}
-@media (max-width: 700px) {
-  .dieng-navbar-inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.7rem;
-    padding: 0 1vw;
-  }
-  .dieng-nav-list {
-    flex-wrap: wrap;
-    gap: 0.3rem 0.8rem;
-    justify-content: flex-start;
-  }
-  .dieng-logo-text {
-    font-size: 1.09rem;
-  }
-}
-</style>
+</header>
