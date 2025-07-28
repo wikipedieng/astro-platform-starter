@@ -1,97 +1,87 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import CategorySidebar from '../components/CategorySidebar.astro';
 import Footer from '../components/Footer.astro';
+
+const title = 'Paket Wisata Dieng 1 Hari';
+const description = 'Jelajahi Dieng dalam satu hari penuh. Paket wisata 1 hari cocok untuk perjalanan singkat namun tetap maksimal, lengkap dengan fasilitas dan destinasi utama.';
 ---
 
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Paket Wisata Dieng 1 Hari</title>
-    <meta name="description" content="Jelajahi Dieng dalam satu hari penuh. Paket wisata 1 hari cocok untuk perjalanan singkat namun tetap maksimal, lengkap dengan fasilitas dan destinasi utama." />
-    <link rel="canonical" href="https://paketwisatadieng.netlify.app/tour-1-hari" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
 
-  <body>
-    <div class="wrapper">
-      <Header />
-      <Navigation />
+  <main class="main-content">
+    <CategorySidebar />
 
-      <main class="main-content">
-        <CategorySidebar />
+    <section class="seasonal">
+      <h1>Paket Wisata Dieng 1 Hari</h1>
+      <p>Paket ini dirancang khusus untuk Anda yang memiliki waktu terbatas, namun ingin merasakan langsung atmosfer pegunungan, budaya lokal, dan keindahan alam Dieng dalam satu hari penuh. Cocok untuk perjalanan privat dari berbagai kota di Jawa Tengah dan DIY.</p>
 
-        <section class="seasonal">
-          <h1>Paket Wisata Dieng 1 Hari</h1>
-          <p>Paket ini dirancang khusus untuk Anda yang memiliki waktu terbatas, namun ingin merasakan langsung atmosfer pegunungan, budaya lokal, dan keindahan alam Dieng dalam satu hari penuh. Cocok untuk perjalanan privat dari berbagai kota di Jawa Tengah dan DIY.</p>
+      <h2>Fasilitas Termasuk</h2>
+      <ul>
+        <li>Kendaraan</li>
+        <li>Layanan makan 2x</li>
+        <li>Tiket masuk destinasi wisata</li>
+        <li>Driver</li>
+        <li>Tour guide</li>
+        <li>BBM</li>
+        <li>Parkir</li>
+        <li>Tol</li>
+        <li>Air mineral</li>
+      </ul>
 
-          <h2>Fasilitas Termasuk</h2>
-          <ul>
-            <li>Kendaraan</li>
-            <li>Layanan makan 2x</li>
-            <li>Tiket masuk destinasi wisata</li>
-            <li>Driver</li>
-            <li>Tour guide</li>
-            <li>BBM</li>
-            <li>Parkir</li>
-            <li>Tol</li>
-            <li>Air mineral</li>
-          </ul>
+      <h2>Destinasi Wisata</h2>
+      <ul>
+        <li>Bukit Sikunir</li>
+        <li>Telaga Cebong</li>
+        <li>Kawah Sikidang</li>
+        <li>Komplek Candi Arjuna</li>
+        <li>Batu Ratapan Angin</li>
+        <li>Dieng Plateau Theater</li>
+        <li>Taman Pintu Langit</li>
+        <li>Sentra Oleh-oleh dan Kuliner Khas</li>
+      </ul>
 
-          <h2>Destinasi Wisata</h2>
-          <ul>
-            <li>Bukit Sikunir</li>
-            <li>Telaga Cebong</li>
-            <li>Kawah Sikidang</li>
-            <li>Komplek Candi Arjuna</li>
-            <li>Batu Ratapan Angin</li>
-            <li>Dieng Plateau Theater</li>
-            <li>Taman Pintu Langit</li>
-            <li>Sentra Oleh-oleh dan Kuliner Khas</li>
-          </ul>
+      <h2>Harga Paket (per peserta)</h2>
+      <p>Harga berdasarkan jumlah peserta (semakin banyak, lebih hemat):</p>
+      <table>
+        <thead>
+          <tr><th>Jumlah Peserta</th><th>Harga / Orang</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1 orang</td><td>Rp2.500.000</td></tr>
+          <tr><td>2 orang</td><td>Rp1.250.000</td></tr>
+          <tr><td>3 orang</td><td>Rp900.000</td></tr>
+          <tr><td>4 orang</td><td>Rp800.000</td></tr>
+          <tr><td>5 orang</td><td>Rp750.000</td></tr>
+          <tr><td>6 orang</td><td>Rp725.000</td></tr>
+          <tr><td>7 orang</td><td>Rp950.000</td></tr>
+          <tr><td>8 orang</td><td>Rp900.000</td></tr>
+          <tr><td>9 orang</td><td>Rp850.000</td></tr>
+          <tr><td>10 orang</td><td>Rp750.000</td></tr>
+        </tbody>
+      </table>
 
-          <h2>Harga Paket (per peserta)</h2>
-          <p>Harga berdasarkan jumlah peserta (semakin banyak, lebih hemat):</p>
-          <table>
-            <thead>
-              <tr><th>Jumlah Peserta</th><th>Harga / Orang</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>1 orang</td><td>Rp2.500.000</td></tr>
-              <tr><td>2 orang</td><td>Rp1.250.000</td></tr>
-              <tr><td>3 orang</td><td>Rp900.000</td></tr>
-              <tr><td>4 orang</td><td>Rp800.000</td></tr>
-              <tr><td>5 orang</td><td>Rp750.000</td></tr>
-              <tr><td>6 orang</td><td>Rp725.000</td></tr>
-              <tr><td>7 orang</td><td>Rp950.000</td></tr>
-              <tr><td>8 orang</td><td>Rp900.000</td></tr>
-              <tr><td>9 orang</td><td>Rp850.000</td></tr>
-              <tr><td>10 orang</td><td>Rp750.000</td></tr>
-            </tbody>
-          </table>
+      <h2>FAQ – Pertanyaan Umum</h2>
+      <h3>Apakah bisa berangkat dari luar kota?</h3>
+      <p>Bisa. Kami menerima penjemputan dari kota-kota seperti Yogyakarta, Semarang, Purwokerto, dan sekitarnya dengan penyesuaian jadwal.</p>
 
-          <h2>FAQ – Pertanyaan Umum</h2>
-          <h3>Apakah bisa berangkat dari luar kota?</h3>
-          <p>Bisa. Kami menerima penjemputan dari kota-kota seperti Yogyakarta, Semarang, Purwokerto, dan sekitarnya dengan penyesuaian jadwal.</p>
+      <h3>Apakah bisa request destinasi tambahan?</h3>
+      <p>Bisa. Selama masih dalam durasi 1 hari, itinerary dapat disesuaikan sesuai minat peserta.</p>
 
-          <h3>Apakah bisa request destinasi tambahan?</h3>
-          <p>Bisa. Selama masih dalam durasi 1 hari, itinerary dapat disesuaikan sesuai minat peserta.</p>
+      <h3>Apakah sudah termasuk tiket masuk?</h3>
+      <p>Ya. Semua destinasi utama sudah termasuk tiket masuk dalam harga paket.</p>
 
-          <h3>Apakah sudah termasuk tiket masuk?</h3>
-          <p>Ya. Semua destinasi utama sudah termasuk tiket masuk dalam harga paket.</p>
+      <h3>Apakah makan sudah termasuk?</h3>
+      <p>Sudah. Termasuk makan pagi dan siang, bisa disesuaikan untuk vegetarian atau halal.</p>
 
-          <h3>Apakah makan sudah termasuk?</h3>
-          <p>Sudah. Termasuk makan pagi dan siang, bisa disesuaikan untuk vegetarian atau halal.</p>
+      <h3>Minimal berapa orang untuk berangkat?</h3>
+      <p>Minimal 1 orang tetap bisa berangkat dengan harga privat. Tidak ada batasan jumlah peserta.</p>
+    </section>
+  </main>
 
-          <h3>Minimal berapa orang untuk berangkat?</h3>
-          <p>Minimal 1 orang tetap bisa berangkat dengan harga privat. Tidak ada batasan jumlah peserta.</p>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  </body>
-</html>
+  <Footer />
+</BaseLayout>
