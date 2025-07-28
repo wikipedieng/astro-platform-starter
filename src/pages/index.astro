@@ -1,90 +1,78 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Navigation from '../components/Navigation.astro';
 import CategorySidebar from '../components/CategorySidebar.astro';
 import Footer from '../components/Footer.astro';
+
+const title = 'Paket Wisata Dieng | Liburan Cerdas ke Negeri di Atas Awan';
+const description = 'Laman resmi Paket Wisata Dieng. Jelajahi Dieng dengan trip berkualitas, pilihan durasi fleksibel, dan layanan lengkap. Booking sekarang, nikmati pengalaman berkesan di dataran tinggi terbaik Jawa.';
 ---
 
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Paket Wisata Dieng | Liburan Cerdas ke Negeri di Atas Awan</title>
-    <meta name="description" content="Laman resmi Paket Wisata Dieng. Jelajahi Dieng dengan trip berkualitas, pilihan durasi fleksibel, dan layanan lengkap. Booking sekarang, nikmati pengalaman berkesan di dataran tinggi terbaik Jawa." />
-    <link rel="canonical" href="https://paketwisatadieng.netlify.app/" />
-    <meta name="robots" content="index,follow" />
-    <link rel="stylesheet" href="/style.css" />
-  </head>
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
 
-  <body>
-    <div class="wrapper">
-      <Header />
-      <Navigation />
+  <main class="main-content">
+    <CategorySidebar />
 
-      <main class="main-content">
-        <CategorySidebar />
+    <section class="seasonal">
+      <h1>Pusat Informasi & Layanan Paket Wisata Dieng</h1>
+      <p>Dieng adalah kawasan dataran tinggi di Jawa Tengah yang dikenal akan keindahan alam, kekayaan budaya, serta atmosfer spiritual yang khas. Di halaman ini, Anda dapat menemukan berbagai pilihan paket wisata Dieng yang disusun secara terstruktur, informatif, dan mudah diakses.</p>
 
-<section class="seasonal">
-  <h1>Pusat Informasi & Layanan Paket Wisata Dieng</h1>
-  <p>Dieng adalah kawasan dataran tinggi di Jawa Tengah yang dikenal akan keindahan alam, kekayaan budaya, serta atmosfer spiritual yang khas. Di halaman ini, Anda dapat menemukan berbagai pilihan paket wisata Dieng yang disusun secara terstruktur, informatif, dan mudah diakses.</p>
+      <h2>Alasan Memilih Destinasi Dieng</h2>
+      <p>Dengan ketinggian lebih dari 2.000 meter di atas permukaan laut, Dieng menyuguhkan udara sejuk, panorama yang mengesankan, dan situs-situs bersejarah yang masih terjaga. Mulai dari telaga berwarna, kawah aktif, hingga candi-candi peninggalan kuno — setiap lokasi menawarkan pengalaman yang unik dan autentik.</p>
 
-  <h2>Alasan Memilih Destinasi Dieng</h2>
-  <p>Dengan ketinggian lebih dari 2.000 meter di atas permukaan laut, Dieng menyuguhkan udara sejuk, panorama yang mengesankan, dan situs-situs bersejarah yang masih terjaga. Mulai dari telaga berwarna, kawah aktif, hingga candi-candi peninggalan kuno — setiap lokasi menawarkan pengalaman yang unik dan autentik.</p>
+      <h2>Layanan Wisata yang Kami Tawarkan</h2>
+      <ul>
+        <li><strong>Itinerary fleksibel</strong>, dapat disesuaikan dengan kebutuhan peserta</li>
+        <li><strong>Transportasi nyaman</strong> menggunakan kendaraan ber-AC dan pengemudi lokal berpengalaman</li>
+        <li><strong>Destinasi lengkap</strong> mencakup titik-titik ikonik seperti sunrise Sikunir, Telaga Warna, dan Kawah Sikidang</li>
+        <li><strong>Harga transparan</strong>, tanpa biaya tersembunyi</li>
+      </ul>
 
-  <h2>Layanan Wisata yang Kami Tawarkan</h2>
-  <ul>
-    <li><strong>Itinerary fleksibel</strong>, dapat disesuaikan dengan kebutuhan peserta</li>
-    <li><strong>Transportasi nyaman</strong> menggunakan kendaraan ber-AC dan pengemudi lokal berpengalaman</li>
-    <li><strong>Destinasi lengkap</strong> mencakup titik-titik ikonik seperti sunrise Sikunir, Telaga Warna, dan Kawah Sikidang</li>
-    <li><strong>Harga transparan</strong>, tanpa biaya tersembunyi</li>
-  </ul>
+      <h3>Pilihan Durasi Perjalanan</h3>
+      <ol>
+        <li><strong>1 Hari</strong> — Trip singkat tanpa menginap, cocok untuk kunjungan ekspres</li>
+        <li><strong>2 Hari 1 Malam</strong> — Inap di homestay lokal, itinerary efisien</li>
+        <li><strong>3–4 Hari</strong> — Eksplorasi lebih dalam, cocok untuk keluarga, instansi, atau komunitas</li>
+      </ol>
 
-  <h3>Pilihan Durasi Perjalanan</h3>
-  <ol>
-    <li><strong>1 Hari</strong> — Trip singkat tanpa menginap, cocok untuk kunjungan ekspres</li>
-    <li><strong>2 Hari 1 Malam</strong> — Inap di homestay lokal, itinerary efisien</li>
-    <li><strong>3–4 Hari</strong> — Eksplorasi lebih dalam, cocok untuk keluarga, instansi, atau komunitas</li>
-  </ol>
+      <h2>Layanan Tambahan</h2>
+      <p>Kami juga menyediakan opsi khusus sesuai kebutuhan:</p>
+      <ul>
+        <li>Private trip dengan rute khusus</li>
+        <li>Paket tematik seperti fotografi, religi, atau petualangan</li>
+        <li>Perjalanan untuk sekolah, kantor, dan instansi</li>
+        <li>Open trip terjadwal dari Jogja, Semarang, Solo, dan Purwokerto</li>
+      </ul>
 
-  <h2>Layanan Tambahan</h2>
-  <p>Kami juga menyediakan opsi khusus sesuai kebutuhan:</p>
-  <ul>
-    <li>Private trip dengan rute khusus</li>
-    <li>Paket tematik seperti fotografi, religi, atau petualangan</li>
-    <li>Perjalanan untuk sekolah, kantor, dan instansi</li>
-    <li>Open trip terjadwal dari Jogja, Semarang, Solo, dan Purwokerto</li>
-  </ul>
+      <h2>Komitmen Pelayanan</h2>
+      <p>Setiap perjalanan dirancang untuk menghadirkan kenyamanan, ketepatan waktu, dan pengalaman berkesan. Tim lapangan kami merupakan warga lokal yang memahami karakter geografis dan budaya Dieng, serta siap mendampingi Anda sepanjang perjalanan.</p>
 
-  <h2>Komitmen Pelayanan</h2>
-  <p>Setiap perjalanan dirancang untuk menghadirkan kenyamanan, ketepatan waktu, dan pengalaman berkesan. Tim lapangan kami merupakan warga lokal yang memahami karakter geografis dan budaya Dieng, serta siap mendampingi Anda sepanjang perjalanan.</p>
+      <h2>Konsultasi dan Pemesanan</h2>
+      <p>Untuk pertanyaan seputar paket, ketersediaan tanggal, atau penyesuaian rencana perjalanan, silakan hubungi kami melalui tautan berikut.<br />
+        <a href="/kontak" class="btn-gallery" style="margin-top:1em;display:inline-block;">Konsultasi via WhatsApp</a>
+      </p>
 
-  <h2>Konsultasi dan Pemesanan</h2>
-  <p>
-    Untuk pertanyaan seputar paket, ketersediaan tanggal, atau penyesuaian rencana perjalanan, silakan hubungi kami melalui tautan berikut.<br />
-    <a href="/kontak.html" class="btn-gallery" style="margin-top:1em;display:inline-block;">Konsultasi via WhatsApp</a>
-  </p>
+      <h2>Pertanyaan yang Sering Diajukan</h2>
 
-  <h2>Pertanyaan yang Sering Diajukan</h2>
+      <h3>Apakah perjalanan dapat disesuaikan dengan kebutuhan instansi atau komunitas?</h3>
+      <p>Ya, kami menyediakan layanan kustomisasi itinerary dan fasilitas untuk rombongan kantor, sekolah, maupun organisasi komunitas, sesuai dengan tujuan dan durasi yang diinginkan.</p>
 
-  <h3>Apakah perjalanan dapat disesuaikan dengan kebutuhan instansi atau komunitas?</h3>
-  <p>Ya, kami menyediakan layanan kustomisasi itinerary dan fasilitas untuk rombongan kantor, sekolah, maupun organisasi komunitas, sesuai dengan tujuan dan durasi yang diinginkan.</p>
+      <h3>Apakah tersedia opsi perjalanan privat?</h3>
+      <p>Tersedia. Anda dapat memilih paket private trip dengan jadwal fleksibel, tanpa digabung dengan peserta lain. Cocok untuk keluarga atau pasangan yang menginginkan kenyamanan lebih.</p>
 
-  <h3>Apakah tersedia opsi perjalanan privat?</h3>
-  <p>Tersedia. Anda dapat memilih paket private trip dengan jadwal fleksibel, tanpa digabung dengan peserta lain. Cocok untuk keluarga atau pasangan yang menginginkan kenyamanan lebih.</p>
+      <h3>Bagaimana sistem pemesanan dan pembayaran?</h3>
+      <p>Pemesanan dapat dilakukan melalui WhatsApp atau formulir online. Pembayaran dilakukan secara bertahap dengan sistem uang muka dan pelunasan, dilengkapi dengan bukti dan konfirmasi resmi.</p>
 
-  <h3>Bagaimana sistem pemesanan dan pembayaran?</h3>
-  <p>Pemesanan dapat dilakukan melalui WhatsApp atau formulir online. Pembayaran dilakukan secara bertahap dengan sistem uang muka dan pelunasan, dilengkapi dengan bukti dan konfirmasi resmi.</p>
+      <h3>Apakah harga sudah termasuk tiket masuk objek wisata?</h3>
+      <p>Seluruh paket sudah mencakup tiket destinasi utama sesuai itinerary, sehingga Anda tidak perlu mengeluarkan biaya tambahan di lokasi.</p>
 
-  <h3>Apakah harga sudah termasuk tiket masuk objek wisata?</h3>
-  <p>Seluruh paket sudah mencakup tiket destinasi utama sesuai itinerary, sehingga Anda tidak perlu mengeluarkan biaya tambahan di lokasi.</p>
+      <h3>Dari kota mana saja tersedia keberangkatan?</h3>
+      <p>Kami melayani titik keberangkatan dari berbagai kota seperti Yogyakarta, Semarang, Purwokerto, Solo, dan Wonosobo. Lokasi meeting point akan diinformasikan saat proses pemesanan.</p>
+    </section>
+  </main>
 
-  <h3>Dari kota mana saja tersedia keberangkatan?</h3>
-  <p>Kami melayani titik keberangkatan dari berbagai kota seperti Yogyakarta, Semarang, Purwokerto, Solo, dan Wonosobo. Lokasi meeting point akan diinformasikan saat proses pemesanan.</p>
-</section>
-
-      </main>
-
-      <Footer />
-    </div>
-  </body>
-</html>
+  <Footer />
+</BaseLayout>
