@@ -1,78 +1,173 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Navigation from '../components/Navigation.astro';
-import CategorySidebar from '../components/CategorySidebar.astro';
-import Footer from '../components/Footer.astro';
-
-const title = 'Paket Wisata Dieng | Liburan Cerdas ke Negeri di Atas Awan';
-const description = 'Laman resmi Paket Wisata Dieng. Jelajahi Dieng dengan trip berkualitas, pilihan durasi fleksibel, dan layanan lengkap. Booking sekarang, nikmati pengalaman berkesan di dataran tinggi terbaik Jawa.';
+import { onMount } from 'astro/client';
 ---
 
-<BaseLayout {title} {description}>
-  <Header />
-  <Navigation />
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paket Wisata Dieng | Liburan Cerdas ke Negeri di Atas Awan</title>
+    <meta name="description" content="Laman resmi Paket Wisata Dieng. Jelajahi Dieng dengan trip berkualitas, pilihan durasi fleksibel, dan layanan lengkap. Booking sekarang, nikmati pengalaman berkesan di dataran tinggi terbaik Jawa." />
+    <link rel="canonical" href="https://paketwisatadieng.netlify.app/" />
+    <meta name="robots" content="index,follow" />
 
-  <main class="main-content">
-    <CategorySidebar />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <section class="seasonal">
-      <h1>Pusat Informasi & Layanan Paket Wisata Dieng</h1>
-      <p>Dieng adalah kawasan dataran tinggi di Jawa Tengah yang dikenal akan keindahan alam, kekayaan budaya, serta atmosfer spiritual yang khas. Di halaman ini, Anda dapat menemukan berbagai pilihan paket wisata Dieng yang disusun secara terstruktur, informatif, dan mudah diakses.</p>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
-      <h2>Alasan Memilih Destinasi Dieng</h2>
-      <p>Dengan ketinggian lebih dari 2.000 meter di atas permukaan laut, Dieng menyuguhkan udara sejuk, panorama yang mengesankan, dan situs-situs bersejarah yang masih terjaga. Mulai dari telaga berwarna, kawah aktif, hingga candi-candi peninggalan kuno — setiap lokasi menawarkan pengalaman yang unik dan autentik.</p>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, sans-serif;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .header {
+        background: #003e9c;
+        color: white;
+        text-align: center;
+        padding: 20px 10px 12px;
+      }
+      .header .page-title {
+        margin: 0;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .header p {
+        margin: 4px 0 0;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .main {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        min-height: 0;
+      }
+      #map {
+        flex: 2;
+        min-height: 300px;
+      }
+      .sidebar {
+        flex: 1;
+        padding: 20px;
+        background: #fff;
+        overflow-y: auto;
+      }
+      .sidebar h1 {
+        font-size: 22px;
+        color: #003e9c;
+        margin-top: 0;
+      }
+      .sidebar h2 {
+        font-size: 18px;
+        color: #003e9c;
+        margin: 14px 0 6px;
+      }
+      footer {
+        text-align: center;
+        font-size: 14px;
+        padding: 16px;
+        background: #f8f8f8;
+        color: #444;
+      }
+      @media (max-width: 768px) {
+        .main { flex-direction: column; }
+        #map { width: 100%; height: 300px; }
+        .sidebar { padding: 16px; }
+        .header .page-title { font-size: 20px; }
+        .header p { font-size: 13px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="page-title">
+        <a href="/" style="color:inherit; text-decoration:none;">
+          Peta Interaktif Paket Wisata Dieng
+        </a>
+      </div>
+      <p>Jelajahi paket wisata terbaik di Dieng dengan peta interaktif yang mudah digunakan.</p>
+    </div>
 
-      <h2>Layanan Wisata yang Kami Tawarkan</h2>
-      <ul>
-        <li><strong>Itinerary fleksibel</strong>, dapat disesuaikan dengan kebutuhan peserta</li>
-        <li><strong>Transportasi nyaman</strong> menggunakan kendaraan ber-AC dan pengemudi lokal berpengalaman</li>
-        <li><strong>Destinasi lengkap</strong> mencakup titik-titik ikonik seperti sunrise Sikunir, Telaga Warna, dan Kawah Sikidang</li>
-        <li><strong>Harga transparan</strong>, tanpa biaya tersembunyi</li>
-      </ul>
+    <div class="main">
+      <div id="map"></div>
+      <div class="sidebar">
+        <h1>Paket Wisata Dieng</h1>
+        <img src="/images/paket-wisata-dieng.jpg" alt="Paket Wisata Dieng" style="width:100%; height:auto; border-radius:8px; margin-bottom:16px;" />
+        <h2>One Day Tour Dieng</h2>
+        <p><strong>Harga mulai dari Rp275.000/pax</strong></p>
+        <p>
+          Cocok buat kamu yang hanya punya waktu sehari, tapi ingin merasakan atmosfer khas pegunungan Dieng.
+          Mulai pagi dari Wonosobo, keliling ke spot ikonik seperti Telaga Warna dan Kawah Sikidang, lalu kembali di sore hari.
+          Efisien tanpa kehilangan esensi perjalanan.
+          <br /><a href="/tour-1-hari/" style="color:#003e9c; text-decoration:none;">Selengkapnya &raquo;</a>
+        </p>
 
-      <h3>Pilihan Durasi Perjalanan</h3>
-      <ol>
-        <li><strong>1 Hari</strong> — Trip singkat tanpa menginap, cocok untuk kunjungan ekspres</li>
-        <li><strong>2 Hari 1 Malam</strong> — Inap di homestay lokal, itinerary efisien</li>
-        <li><strong>3–4 Hari</strong> — Eksplorasi lebih dalam, cocok untuk keluarga, instansi, atau komunitas</li>
-      </ol>
+        <h2>Paket 2 Hari 1 Malam</h2>
+        <p><strong>Harga mulai dari Rp975.000/pax</strong></p>
+        <p>
+          Pilihan populer bagi traveler yang ingin lebih dari sekadar mampir.
+          Hari pertama menjelajahi alam dan situs budaya, malamnya menikmati suasana dingin Dieng.
+          Hari kedua, biasanya ditutup dengan sunrise di Sikunir.
+          <br /><a href="/tour-2-hari/" style="color:#003e9c; text-decoration:none;">Selengkapnya &raquo;</a>
+        </p>
 
-      <h2>Layanan Tambahan</h2>
-      <p>Kami juga menyediakan opsi khusus sesuai kebutuhan:</p>
-      <ul>
-        <li>Private trip dengan rute khusus</li>
-        <li>Paket tematik seperti fotografi, religi, atau petualangan</li>
-        <li>Perjalanan untuk sekolah, kantor, dan instansi</li>
-        <li>Open trip terjadwal dari Jogja, Semarang, Solo, dan Purwokerto</li>
-      </ul>
+        <h2>Paket 3 Hari 2 Malam</h2>
+        <p><strong>Harga mulai dari Rp1.700.000/pax</strong></p>
+        <p>
+          Waktu yang cukup untuk menjelajah tanpa terburu-buru.
+          Bisa menambahkan destinasi tersembunyi, mencoba kuliner lokal, dan punya waktu lebih untuk menikmati udara sejuk.
+          <br /><a href="/tour-3-hari/" style="color:#003e9c; text-decoration:none;">Selengkapnya &raquo;</a>
+        </p>
+      </div>
+    </div>
 
-      <h2>Komitmen Pelayanan</h2>
-      <p>Setiap perjalanan dirancang untuk menghadirkan kenyamanan, ketepatan waktu, dan pengalaman berkesan. Tim lapangan kami merupakan warga lokal yang memahami karakter geografis dan budaya Dieng, serta siap mendampingi Anda sepanjang perjalanan.</p>
+    <footer>
+      <div style="margin-bottom:8px;">
+        <a href="/tentang/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Tentang</a>
+        <a href="/ketentuan/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Ketentuan</a>
+        <a href="/privasi/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Privasi</a>
+        <a href="/kontak/" style="margin: 0 10px; color: #003e9c; text-decoration: none;">Kontak</a>
+      </div>
+      © 2025 Paket Wisata Dieng | Semua hak cipta dilindungi
+    </footer>
 
-      <h2>Konsultasi dan Pemesanan</h2>
-      <p>Untuk pertanyaan seputar paket, ketersediaan tanggal, atau penyesuaian rencana perjalanan, silakan hubungi kami melalui tautan berikut.<br />
-        <a href="/kontak" class="btn-gallery" style="margin-top:1em;display:inline-block;">Konsultasi via WhatsApp</a>
-      </p>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      var map = L.map('map', { attributionControl: false });
 
-      <h2>Pertanyaan yang Sering Diajukan</h2>
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-      <h3>Apakah perjalanan dapat disesuaikan dengan kebutuhan instansi atau komunitas?</h3>
-      <p>Ya, kami menyediakan layanan kustomisasi itinerary dan fasilitas untuk rombongan kantor, sekolah, maupun organisasi komunitas, sesuai dengan tujuan dan durasi yang diinginkan.</p>
+      L.control.attribution({
+        prefix: '&copy; <a href="https://www.openstreetmap.org/" target="_blank" rel="nofollow noopener">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-      <h3>Apakah tersedia opsi perjalanan privat?</h3>
-      <p>Tersedia. Anda dapat memilih paket private trip dengan jadwal fleksibel, tanpa digabung dengan peserta lain. Cocok untuk keluarga atau pasangan yang menginginkan kenyamanan lebih.</p>
+      var arjuna = L.marker([-7.2045, 109.9080])
+        .bindPopup('<b>Komplek Candi Arjuna</b><br><a href="/tour-1-hari/">Lihat Paket 1 Hari</a>')
+        .addTo(map);
 
-      <h3>Bagaimana sistem pemesanan dan pembayaran?</h3>
-      <p>Pemesanan dapat dilakukan melalui WhatsApp atau formulir online. Pembayaran dilakukan secara bertahap dengan sistem uang muka dan pelunasan, dilengkapi dengan bukti dan konfirmasi resmi.</p>
+      var sikidang = L.marker([-7.226509, 109.919636])
+        .bindPopup('<b>Kawah Sikidang</b><br><a href="/tour-2-hari/">Lihat Paket 2H1M</a>')
+        .addTo(map);
 
-      <h3>Apakah harga sudah termasuk tiket masuk objek wisata?</h3>
-      <p>Seluruh paket sudah mencakup tiket destinasi utama sesuai itinerary, sehingga Anda tidak perlu mengeluarkan biaya tambahan di lokasi.</p>
+      var telaga = L.marker([-7.2132, 109.9129])
+        .bindPopup('<b>Telaga Warna</b><br><a href="/tour-3-hari/">Lihat Paket 3H2M</a>')
+        .addTo(map);
 
-      <h3>Dari kota mana saja tersedia keberangkatan?</h3>
-      <p>Kami melayani titik keberangkatan dari berbagai kota seperti Yogyakarta, Semarang, Purwokerto, Solo, dan Wonosobo. Lokasi meeting point akan diinformasikan saat proses pemesanan.</p>
-    </section>
-  </main>
-
-  <Footer />
-</BaseLayout>
+      var group = L.featureGroup([arjuna, sikidang, telaga]);
+      map.fitBounds(group.getBounds(), {
+        paddingTopLeft: window.innerWidth <= 768 ? [30, 30] : [200, 50],
+        paddingBottomRight: [30, 30]
+      });
+    </script>
+  </body>
+</html>
