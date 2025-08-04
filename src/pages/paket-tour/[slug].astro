@@ -21,7 +21,7 @@ if (!post) {
 }
 
 const { title, description, pubDate, author } = post.data;
-const content = await post.render(); // ✅ ini yang penting untuk markdown
+const { Content } = await post.render(); // ⬅️ PERBAIKAN PENTING
 ---
 
 <BaseLayout {title} {description}>
@@ -37,7 +37,7 @@ const content = await post.render(); // ✅ ini yang penting untuk markdown
         Dipublikasikan: {new Date(pubDate).toLocaleDateString('id-ID')} · Penulis: {author}
       </p>
       <div style="margin-top:1.5rem;">
-        {content}
+        <Content />
       </div>
     </article>
   </main>
