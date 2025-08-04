@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Navigation from '../../components/Navigation.astro';
+import CategorySidebar from '../../components/CategorySidebar.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Paket Wisata Dieng dari Semarang – Fleksibel, Seru, dan Siap Jalan";
+const description = "Berangkat dari Semarang ke Dieng kini lebih praktis. Tersedia pilihan paket wisata 1–3 hari untuk semua jenis traveler, lengkap dengan fasilitas terbaik dan titik jemput strategis.";
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>{title}</h1>
+      <p><em>Paket wisata Dieng dengan titik berangkat dari Semarang. Cocok untuk kamu yang ingin jalan-jalan ke alam bebas tanpa harus repot atur sendiri.</em></p>
+
+      <p style="margin-top:1rem; line-height:1.7;">
+        Ingin kabur sejenak dari hiruk-pikuk kota? Kini tersedia <strong>paket wisata dari Semarang ke Dieng</strong> dengan konsep fleksibel — bisa untuk 1 hari pulang-pergi, hingga 3 hari 2 malam. Penjemputan tersedia dari pusat kota, Terminal Banyumanik, Bandara Ahmad Yani, atau hotel tempat menginap kamu. Cocok untuk pelancong sendiri, keluarga, hingga rombongan komunitas.
+      </p>
+
+      <h2 style="margin-top:2rem;">📅 Pilihan Durasi Paket</h2>
+      <ul style="line-height:1.7;">
+        <li><strong>1 Hari (PP):</strong> Berangkat tengah malam, sunrise di Sikunir, 5+ destinasi utama, kembali sore hari.</li>
+        <li><strong>2 Hari 1 Malam:</strong> Tambah waktu istirahat, nikmati sunset dan penginapan di desa Dieng.</li>
+        <li><strong>3 Hari 2 Malam:</strong> Eksplorasi lengkap, cocok untuk traveler serius atau dokumentasi konten alam.</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">✅ Fasilitas Termasuk</h2>
+      <ul style="line-height:1.7;">
+        <li>Transportasi AC dari dan ke Semarang</li>
+        <li>Tiket masuk semua destinasi wisata</li>
+        <li>Makan sesuai program perjalanan</li>
+        <li>Penginapan (2H1M / 3H2M)</li>
+        <li>Tour guide berpengalaman</li>
+        <li>Dokumentasi foto/video opsional</li>
+        <li>Air mineral, camilan ringan, dan P3K</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">📍 Destinasi Favorit</h2>
+      <p style="line-height:1.7;">
+        Dari golden sunrise hingga lanskap vulkanik, semua disusun dalam rute efisien:
+      </p>
+      <ul style="line-height:1.7;">
+        <li>Bukit Sikunir</li>
+        <li>Telaga Warna & Batu Pandang</li>
+        <li>Kawah Sikidang</li>
+        <li>Candi Arjuna & Komplek Heritage</li>
+        <li>Telaga Dringo, Merdada, dan spot hidden gem lainnya</li>
+        <li>Dieng Plateau Theater</li>
+        <li>Spot Instagrammable seperti Pintu Langit, Bukit Scooter, dan Tol Awan</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">🚐 Kenapa dari Semarang?</h2>
+      <ul style="line-height:1.7;">
+        <li>Jarak ideal ±4,5 jam via Wonosobo</li>
+        <li>Tersedia armada pribadi atau gabungan (open trip)</li>
+        <li>Bisa request private trip dengan rute khusus</li>
+        <li>Waktu fleksibel dan tersedia sepanjang tahun</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">📝 Cara Pemesanan</h2>
+      <ol style="line-height:1.7;">
+        <li>Pilih tanggal dan durasi</li>
+        <li>Kami jemput di titik yang kamu tentukan</li>
+        <li>Lakukan pembayaran sesuai instruksi</li>
+        <li>Itinerary dan e-voucher dikirim via WA/email</li>
+      </ol>
+
+      <h2 style="margin-top:2rem;">❓ FAQ</h2>
+      <p><strong>Q: Apakah bisa ikut sendiri?</strong><br />A: Bisa. Kami menerima solo traveler, gabung open trip.</p>
+      <p><strong>Q: Apa harus dari domisili Semarang?</strong><br />A: Tidak. Asal kamu dijemput dari kota Semarang, bisa ikut paket ini.</p>
+      <p><strong>Q: Bisa request itinerary?</strong><br />A: Bisa, untuk paket private. Open trip mengikuti jadwal umum.</p>
+      <p><strong>Q: Apakah cocok untuk anak dan lansia?</strong><br />A: Ya, itinerary dibuat seaman dan senyaman mungkin.</p>
+
+      <h2 style="margin-top:2rem;">🎒 Siap Menjelajah?</h2>
+      <p style="line-height:1.7;">
+        Tak perlu repot atur transportasi, rute, dan penginapan. Dengan <strong>paket wisata Dieng dari Semarang</strong>, kamu tinggal berangkat — kami yang atur sisanya. Rasakan pengalaman terbaik menjelajahi negeri di atas awan bersama tim yang sudah berpengalaman.
+      </p>
+      <p style="margin-top:1rem;">📲 Hubungi kami sekarang untuk cek ketersediaan dan jadwal terbaru.</p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
