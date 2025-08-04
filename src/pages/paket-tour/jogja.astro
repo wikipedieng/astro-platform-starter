@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Navigation from '../../components/Navigation.astro';
+import CategorySidebar from '../../components/CategorySidebar.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Paket Wisata Dieng dari Jogja – Nyaman, Terjadwal, dan Penuh Pengalaman";
+const description = "Paket tour ke Dieng dengan titik berangkat dari Jogja. Cocok untuk semua wisatawan yang sedang berada di Yogyakarta, baik keluarga, pasangan, maupun solo traveler.";
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>{title}</h1>
+      <p style="margin-top:1rem; line-height:1.8;">
+        Dieng kini semakin mudah dijangkau, terutama bagi kamu yang sedang berada di Yogyakarta dan ingin menikmati udara sejuk dataran tinggi.
+        <strong> Paket wisata Dieng dari Jogja </strong> ini cocok untuk siapa saja — baik warga lokal maupun wisatawan dari luar kota yang sedang berada di Jogja dan ingin menjelajah Dieng dengan cara yang praktis dan menyenangkan.
+      </p>
+      <p style="margin-top:1rem; line-height:1.8;">
+        Penjemputan dilakukan dari titik-titik strategis seperti Stasiun Tugu, Bandara YIA, atau hotel di pusat kota. Cocok untuk pelancong solo, keluarga, maupun rombongan.
+      </p>
+
+      <h2 style="margin-top:2rem;">Pilihan Durasi Paket</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li><strong>1 Hari (PP)</strong> – Sunrise hunter & short trip: Jemput subuh, Sunrise Sikunir, 5 destinasi utama</li>
+        <li><strong>2 Hari 1 Malam</strong> – Untuk keluarga & pelancong santai: Penginapan nyaman, Sunrise & sunset, 10+ destinasi</li>
+        <li><strong>3 Hari 2 Malam</strong> – Eksplorasi total: Full itinerary, waktu lebih longgar, semua spot utama</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Fasilitas Sudah Termasuk</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li>Transportasi AC pulang–pergi dari Jogja</li>
+        <li>Tiket masuk semua destinasi wisata</li>
+        <li>Makan sesuai program</li>
+        <li>Penginapan (untuk paket 2H1M / 3H2M)</li>
+        <li>Guide lokal ramah & berpengalaman</li>
+        <li>Dokumentasi foto/video opsional</li>
+        <li>Air mineral dan camilan ringan</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Destinasi Populer</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li>Bukit Sikunir – Golden Sunrise</li>
+        <li>Telaga Warna dan Batu Pandang</li>
+        <li>Kawah Sikidang</li>
+        <li>Komplek Candi Arjuna</li>
+        <li>Telaga Merdada atau Dringo</li>
+        <li>Dieng Plateau Theater</li>
+        <li>Spot kekinian seperti Bukit Scooter, Pintu Langit, dll</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Kenapa Start dari Jogja?</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li>🧭 <strong>Titik strategis</strong> – Banyak wisatawan transit di Jogja</li>
+        <li>🚐 <strong>Akses langsung</strong> – Tanpa harus ganti transportasi</li>
+        <li>📍 <strong>Jemput fleksibel</strong> – Hotel, stasiun, atau bandara</li>
+        <li>📸 <strong>Penuh pengalaman</strong> – Sunrise, kabut, budaya, danau</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Cara Pemesanan</h2>
+      <ol style="line-height:1.8; margin-left:1rem;">
+        <li>Pilih durasi dan tanggal</li>
+        <li>Tentukan titik jemput</li>
+        <li>Hubungi via WhatsApp atau isi formulir</li>
+        <li>Lakukan pembayaran</li>
+        <li>Terima itinerary & e-voucher</li>
+      </ol>
+
+      <h2 style="margin-top:2rem;">FAQ</h2>
+      <p><strong>Q: Apakah hanya untuk warga Jogja?</strong><br/>
+      A: Tidak. Paket ini untuk siapa saja yang <strong>start dari Jogja</strong>, termasuk wisatawan luar kota.</p>
+
+      <p><strong>Q: Bisa ikut sendiri?</strong><br/>
+      A: Bisa. Solo traveler bisa gabung open trip.</p>
+
+      <p><strong>Q: Cocok untuk anak & lansia?</strong><br/>
+      A: Sangat cocok. Rute dan ritme dibuat nyaman untuk semua usia.</p>
+
+      <p><strong>Q: Bisa pilih destinasi?</strong><br/>
+      A: Bisa untuk private trip. Open trip mengikuti itinerary yang ditetapkan.</p>
+
+      <p style="margin-top:2rem; font-weight:bold;">
+        📩 <em>Tertarik ikut?</em> Cek jadwal atau hubungi tim kami untuk info lengkap & update terbaru.
+      </p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
