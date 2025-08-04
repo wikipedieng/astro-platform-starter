@@ -1,6 +1,5 @@
 ---
 title: "Paket Wisata Dieng dari Jogja – Nyaman, Terjadwal, dan Penuh Pengalaman"
-slug: "jogja"
 pubDate: "2025-08-04"
 description: "Paket tour ke Dieng dengan titik berangkat dari Jogja. Cocok untuk semua wisatawan yang sedang berada di Yogyakarta, baik keluarga, pasangan, maupun solo traveler."
 author: "Redaksi Dieng"
