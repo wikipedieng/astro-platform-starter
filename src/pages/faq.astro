@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import CategorySidebar from '../components/CategorySidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'FAQ Seputar Paket Wisata Dieng';
+const description = 'Pertanyaan umum tentang paket wisata ke Dataran Tinggi Dieng. Panduan penting bagi wisatawan yang ingin merencanakan perjalanan secara aman dan nyaman.';
+
+const faqItems = [
+  { q: "Apa saja yang termasuk dalam fasilitas paket wisata Dieng?", a: "Umumnya mencakup transportasi, tiket masuk, pemandu wisata, makan, akomodasi (jika menginap), dokumentasi, air mineral, dan asuransi (opsional)." },
+  { q: "Berapa harga rata-rata paket wisata ke Dieng?", a: "Mulai dari Rp200.000 per orang untuk 1 hari, hingga Rp1.500.000 untuk 3 hari dengan fasilitas lengkap. Tergantung durasi dan jumlah peserta." },
+  { q: "Apakah ada paket tanpa menginap?", a: "Ya. Paket 1 hari cocok untuk wisatawan yang ingin langsung pulang di hari yang sama, tanpa menginap." },
+  { q: "Kapan waktu terbaik mengunjungi Dieng?", a: "Juni–Agustus adalah musim terbaik karena cuaca cerah dan ada peluang melihat embun es. Hindari Desember–Maret (musim hujan)." },
+  { q: "Bagaimana cara memesan paket wisata dengan aman?", a: "Gunakan situs resmi, cek testimoni, pastikan rekening resmi, dan minta konfirmasi tertulis sebelum transfer." },
+  { q: "Apakah wajib membayar uang muka (DP)?", a: "Ya, biasanya 20–50% dari total biaya. Sisa dibayar saat hari H atau sebelum keberangkatan." },
+  { q: "Apakah harga termasuk semua tiket wisata?", a: "Sebagian besar paket sudah termasuk tiket masuk. Untuk Jeep atau wahana opsional biasanya tidak termasuk." },
+  { q: "Bisa pilih destinasi sendiri?", a: "Ya, jika memilih paket private trip. Open trip memiliki itinerary tetap." },
+  { q: "Apakah ada paket khusus keluarga?", a: "Ada. Paket family trip biasanya menggunakan kendaraan pribadi dan akomodasi 1 rumah." },
+  { q: "Apakah ada penjemputan dari kota besar?", a: "Bisa dijemput dari Jogja, Semarang, Purwokerto, Solo, dan kota lainnya sesuai permintaan." },
+  { q: "Berapa jumlah minimal peserta untuk ikut open trip?", a: "Umumnya 1–2 orang bisa gabung. Akan digabung dengan peserta lain." },
+  { q: "Apakah ada paket untuk rombongan besar?", a: "Ya. Tersedia paket group atau gathering untuk 10–100 orang dengan penyesuaian kendaraan dan penginapan." },
+  { q: "Apakah bisa pesan mendadak?", a: "Bisa, jika masih tersedia. Disarankan minimal H-3 sebelum keberangkatan." },
+  { q: "Apakah bisa membawa anak-anak?", a: "Tentu. Banyak destinasi ramah anak. Sebaiknya diskusikan dengan penyedia soal kebutuhan khusus anak." },
+  { q: "Apakah aman untuk lansia?", a: "Ya, asal sehat dan tidak ada larangan medis. Hindari destinasi ekstrem atau trekking jauh." },
+  { q: "Berapa suhu di Dieng?", a: "Pagi hari bisa 5–12°C, terutama musim kemarau. Siang 15–20°C. Siapkan jaket tebal." },
+  { q: "Apakah disediakan tour guide?", a: "Ya. Paket biasanya sudah termasuk tour leader atau pemandu lokal." },
+  { q: "Apakah perlu booking penginapan sendiri?", a: "Tidak perlu jika paket sudah termasuk akomodasi. Cek kembali rincian paket." },
+  { q: "Apa jenis kendaraan yang digunakan?", a: "Innova, Hiace, Elf, atau bus pariwisata, tergantung jumlah peserta." },
+  { q: "Apakah tersedia dokumentasi?", a: "Beberapa paket menyertakan dokumentasi foto/video, terutama untuk open trip atau trip eksklusif." },
+  { q: "Bisakah request menu makanan?", a: "Ya, untuk peserta dengan pantangan tertentu bisa request. Informasikan sejak awal." },
+  { q: "Apakah tersedia paket honeymoon?", a: "Ada. Beberapa penyedia menawarkan paket romantis dengan akomodasi khusus dan suasana privat." },
+  { q: "Apakah Dieng ramah untuk penyandang disabilitas?", a: "Sebagian besar objek wisata belum ramah akses, namun bisa disesuaikan dengan bantuan pemandu." },
+  { q: "Apakah ada asuransi perjalanan?", a: "Beberapa penyedia menyertakan asuransi. Tanyakan dulu apakah termasuk dalam harga." },
+  { q: "Bagaimana jika cuaca buruk?", a: "Beberapa destinasi mungkin diganti. Komunikasikan dengan penyedia, biasanya ada alternatif aman." },
+  { q: "Apakah perlu membawa obat pribadi?", a: "Disarankan. Cuaca dingin bisa memicu masuk angin, mual, atau tekanan darah naik." },
+  { q: "Apakah bisa refund jika batal?", a: "Tergantung kebijakan penyedia. Umumnya ada potongan DP jika batal mendadak." },
+  { q: "Apakah ada itinerary tetap?", a: "Open trip punya itinerary tetap. Private trip bisa disesuaikan selama waktu memungkinkan." },
+  { q: "Berapa lama perjalanan dari Wonosobo ke Dieng?", a: "Sekitar 1 jam tergantung kondisi lalu lintas." },
+  { q: "Apakah perlu membawa uang tunai?", a: "Ya. Beberapa tempat belum menerima pembayaran digital. Bawa secukupnya untuk jajan dan oleh-oleh." },
+  { q: "Apakah bisa menginap di homestay?", a: "Bisa. Homestay jadi pilihan populer dengan harga lebih terjangkau dan nuansa lokal." },
+  { q: "Berapa lama idealnya wisata di Dieng?", a: "Minimal 2 hari 1 malam agar cukup waktu menjelajahi destinasi utama tanpa terburu-buru." },
+  { q: "Apakah ada toilet umum di semua destinasi?", a: "Ada, tapi fasilitas bisa berbeda-beda. Bawa tisu basah dan air secukupnya." },
+  { q: "Apakah bisa ikut tanpa vaksin?", a: "Kebijakan bisa berbeda tergantung kondisi. Saat ini, vaksin tidak selalu jadi syarat mutlak." },
+  { q: "Apakah bisa membawa drone?", a: "Tergantung kebijakan objek wisata. Beberapa tempat melarang tanpa izin." },
+  { q: "Apakah tersedia sinyal HP di semua lokasi?", a: "Sebagian besar lokasi ada sinyal, tapi bisa lemah di area pegunungan atau lembah." },
+  { q: "Apakah bisa mengatur jadwal sendiri?", a: "Bisa untuk private trip. Jadwal bisa disusun sesuai minat dan waktu." },
+  { q: "Apakah bisa gabung open trip jika solo traveler?", a: "Bisa. Justru open trip ideal untuk solo traveler agar biaya lebih hemat dan bertemu teman baru." },
+  { q: "Apakah ada batas usia?", a: "Tidak ada batasan resmi, tapi lansia dan balita perlu pengawasan khusus." },
+  { q: "Apa saja oleh-oleh khas Dieng?", a: "Carica, purwaceng, kentang Dieng, jamur crispy, dan keripik tempe adalah yang paling populer." },
+  { q: "Apakah tersedia paket Jeep Dieng?", a: "Ada. Paket Jeep khusus menjelajahi medan berbatu seperti Batu Pandang dan Telaga Dringo." },
+  { q: "Apakah boleh membawa hewan peliharaan?", a: "Umumnya tidak disarankan. Mayoritas penginapan dan kendaraan tidak menerima hewan." },
+  { q: "Apakah ada tempat ibadah?", a: "Ada musala dan masjid di sekitar Dieng dan hampir semua destinasi." },
+  { q: "Apakah boleh membawa makanan sendiri?", a: "Boleh. Tapi sebagian paket sudah termasuk makan, jadi periksa dulu biar tidak dobel." },
+  { q: "Apakah ada tiket terusan untuk wisata?", a: "Ya, ada paket gabungan untuk beberapa destinasi seperti Telaga Warna, Candi, dan Kawah Sikidang." },
+  { q: "Berapa kapasitas mobil untuk private trip?", a: "Avanza/Innova (4–6 orang), Hiace (10–13 orang), Elf (13–17 orang), tergantung kenyamanan." },
+  { q: "Apakah bisa booking via WhatsApp?", a: "Mayoritas penyedia menerima pemesanan langsung via WhatsApp untuk kemudahan komunikasi." },
+  { q: "Apakah ada jadwal keberangkatan reguler?", a: "Open trip punya jadwal tetap (biasanya weekend). Private trip bisa diatur kapan saja." },
+  { q: "Apakah penyedia bisa bantu sesi foto?", a: "Ya, beberapa penyedia menyediakan fotografer dokumentasi profesional atau opsional." },
+  { q: "Apakah boleh reschedule?", a: "Boleh jika diberi kabar jauh hari. Reschedule mendadak tergantung ketersediaan." }
+];
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+  <main class="main-content">
+    <CategorySidebar />
+    <section class="faq-accordion">
+      <h1>{title}</h1>
+      <p><em>{description}</em></p>
+
+      {faqItems.map(({ q, a }) => (
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            {q}
+            <span class="faq-icon">▶</span>
+          </button>
+          <div class="faq-answer">{a}</div>
+        </div>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+.faq-accordion {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+}
+.faq-item {
+  border-bottom: 1px solid #eee;
+}
+.faq-question {
+  background: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #19335a;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-question:hover {
+  background: #f9f9f9;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding-bottom: 1rem;
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(90deg);
+}
+</style>
