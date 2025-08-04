@@ -1,10 +1,17 @@
 ---
+import { getCollection, getEntryBySlug } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Navigation from '../../components/Navigation.astro';
 import CategorySidebar from '../../components/CategorySidebar.astro';
 import Footer from '../../components/Footer.astro';
-import { getEntryBySlug } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('paket-tour');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
 
 const { slug } = Astro.params;
 const post = await getEntryBySlug('paket-tour', slug);
@@ -22,6 +29,7 @@ const { title, description, pubDate, author } = post.data;
 
   <main class="main-content">
     <CategorySidebar />
+
     <article class="seasonal" style="max-width:800px; margin:0 auto;">
       <h1>{title}</h1>
       <p style="color:#777; font-size:0.95rem;">
