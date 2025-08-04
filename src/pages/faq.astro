@@ -76,7 +76,32 @@ const faqJsonLd = {
 ---
 
 <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+  <main class="main-content">
+    <CategorySidebar />
+    <section class="faq-accordion">
+      <h1>{title}</h1>
+      <p><em>{description}</em></p>
+
+      {faqItems.map(({ q, a }) => (
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+            {q}
+            <span class="faq-icon">▶</span>
+          </button>
+          <div class="faq-answer">{a}</div>
+        </div>
+      ))}
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
 <style>
+/* CSS FAQ Modern ala Help Center */
 .faq-accordion {
   max-width: 768px;
   margin: 0 auto;
