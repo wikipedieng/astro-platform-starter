@@ -9,8 +9,8 @@ import { getCollection } from 'astro:content';
 
 const beritaList = await getCollection('paket-tour');
 
-const title = 'Paket Tour Dieng';
-const description = 'Paket tour ke dataran tinggi Dieng dari berbagai kota, cocok untuk keluarga, pasangan, hingga rombongan.';
+const title = 'Paket Tour Dieng dari Berbagai Kota';
+const description = 'Temukan pilihan paket tour ke Dataran Tinggi Dieng dengan jadwal fleksibel dan fasilitas lengkap. Cocok untuk perjalanan keluarga, pasangan, atau rombongan.';
 ---
 
 <BaseLayout {title} {description}>
@@ -23,6 +23,13 @@ const description = 'Paket tour ke dataran tinggi Dieng dari berbagai kota, coco
     <section class="seasonal">
       <h1>Paket Tour Dieng</h1>
       <p><em>Rekomendasi paket wisata ke Dataran Tinggi Dieng. Tersedia pilihan dari Jogja, Semarang, Solo, Purwokerto, dan kota lainnya.</em></p>
+
+      <p style="margin-top:1rem; line-height:1.7;">
+        Merencanakan perjalanan ke Dieng kini lebih mudah. Di halaman ini, Anda bisa menemukan berbagai <strong>paket tour Dieng</strong> yang dirancang untuk kenyamanan, efisiensi waktu, dan kesesuaian dengan kebutuhan Anda.
+      </p>
+      <p style="margin-top:1rem; line-height:1.7;">
+        Berangkat dari kota seperti Jogja, Semarang, Solo, atau Purwokerto, semua pilihan dirangkum dalam satu tempat. Tak perlu bingung lagi soal rute, transportasi, atau tiket – cukup pilih paket yang sesuai, dan biarkan perjalanan membawa Anda menikmati kabut, candi, dan sunrise terbaik di dataran tinggi Dieng.
+      </p>
 
       <div class="berita-list" style="display:grid; gap:1.5rem; margin-top:2rem;">
         {beritaList
