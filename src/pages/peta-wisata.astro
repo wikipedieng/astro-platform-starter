@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import CategorySidebar from '../components/CategorySidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Peta Wisata Dieng – Lokasi Lengkap & Interaktif';
+const description = 'Lihat peta wisata Dieng secara interaktif: lokasi Sikunir, Kawah Sikidang, Telaga Warna, Candi Arjuna, dan puluhan spot populer lainnya. Cocok untuk perencanaan perjalanan Anda.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>Peta Wisata Dieng Lengkap</h1>
+      <p><em>Gunakan peta interaktif di bawah ini untuk mengeksplorasi lokasi destinasi wisata populer di kawasan Dataran Tinggi Dieng.</em></p>
+
+      <div id="map" style="height:80vh; width:100%; border-radius:10px; margin-top:1rem;"></div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script type="application/javascript" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <script type="application/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const map = L.map("map").setView([-7.21, 109.92], 13);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      const spots = [
+        { name: "Bukit Sikunir", lat: -7.2305, lon: 109.9231 },
+        { name: "Kawah Sikidang", lat: -7.2099, lon: 109.9275 },
+        { name: "Candi Arjuna", lat: -7.2049, lon: 109.9181 },
+        { name: "Telaga Warna", lat: -7.2106, lon: 109.9193 },
+        { name: "Batu Ratapan Angin", lat: -7.2114, lon: 109.9202 },
+        { name: "Telaga Dringo", lat: -7.2332, lon: 109.8855 },
+        { name: "Dieng Park", lat: -7.2053, lon: 109.9148 },
+        { name: "Museum Kailasa", lat: -7.2035, lon: 109.9175 },
+        { name: "Telaga Merdada", lat: -7.2257, lon: 109.8963 },
+        { name: "Kawah Candradimuka", lat: -7.2182, lon: 109.9429 },
+        { name: "Pintu Langit", lat: -7.2303, lon: 109.9267 },
+        { name: "Bukit Scooter", lat: -7.2094, lon: 109.9235 },
+        { name: "Savana Pangonan", lat: -7.2205, lon: 109.9333 },
+      ];
+
+      spots.forEach((spot) => {
+        L.marker([spot.lat, spot.lon])
+          .addTo(map)
+          .bindPopup(`<strong>${spot.name}</strong>`);
+      });
+    });
+  </script>
+</BaseLayout>
