@@ -75,7 +75,7 @@ const faqJsonLd = {
 };
 ---
 
-<script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+<Fragment set:html={`<script type="application/ld+json">${JSON.stringify(faqJsonLd)}</script>`} />
 
 <BaseLayout {title} {description}>
   <Header />
