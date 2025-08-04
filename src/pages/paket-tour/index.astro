@@ -7,7 +7,7 @@ import Footer from '../../components/Footer.astro';
 
 import { getCollection } from 'astro:content';
 
-const beritaList = await getCollection('berita');
+const beritaList = await getCollection('paket-tour');
 
 const title = 'Paket Tour Dieng';
 const description = 'Paket tour ke dataran tinggi Dieng.';
@@ -24,7 +24,7 @@ const description = 'Paket tour ke dataran tinggi Dieng.';
 
       <div class="berita-list" style="display:grid; gap:1.5rem; margin-top:2rem;">
         {beritaList.sort((a, b) => new Date(b.data.date) - new Date(a.data.date)).map(({ data }) => (
-          <a href={`/berita/${data.slug}/`} style="display:block; border:1px solid #ddd; border-radius:8px; padding:1rem; text-decoration:none; color:inherit;">
+          <a href={`/paket-tour/${data.slug}/`} style="display:block; border:1px solid #ddd; border-radius:8px; padding:1rem; text-decoration:none; color:inherit;">
             <img src={data.cover} alt={data.title} style="width:100%; height:auto; border-radius:6px; margin-bottom:0.5rem;" />
             <h2 style="margin:0; font-size:1.25rem;">{data.title}</h2>
             <p style="font-size:0.9rem; color:#555;">{new Date(data.date).toLocaleDateString()}</p>
