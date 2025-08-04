@@ -1,14 +1,11 @@
 ---
 import { getCollection, getEntryBySlug } from 'astro:content';
-import Markdown from 'astro/components/Markdown.astro'; // ✅ WAJIB: ini yang kurang sebelumnya
-
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Navigation from '../../components/Navigation.astro';
 import CategorySidebar from '../../components/CategorySidebar.astro';
 import Footer from '../../components/Footer.astro';
 
-// ✅ Wajib export ini untuk Netlify bisa bangun route dinamis
 export async function getStaticPaths() {
   const posts = await getCollection('paket-tour');
   return posts.map((post) => ({
@@ -24,6 +21,7 @@ if (!post) {
 }
 
 const { title, description, pubDate, author } = post.data;
+const content = await post.render(); // ✅ ini yang penting untuk markdown
 ---
 
 <BaseLayout {title} {description}>
@@ -39,7 +37,7 @@ const { title, description, pubDate, author } = post.data;
         Dipublikasikan: {new Date(pubDate).toLocaleDateString('id-ID')} · Penulis: {author}
       </p>
       <div style="margin-top:1.5rem;">
-        <Markdown content={post.body} />
+        {content}
       </div>
     </article>
   </main>
