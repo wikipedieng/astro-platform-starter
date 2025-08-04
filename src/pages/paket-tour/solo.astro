@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Navigation from '../../components/Navigation.astro';
+import CategorySidebar from '../../components/CategorySidebar.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Paket Wisata Dieng dari Solo – Ringkas, Efisien, dan Sarat Petualangan";
+const description = "Perjalanan ke Dataran Tinggi Dieng dari Solo kini semakin mudah. Tersedia paket 1–3 hari dengan fasilitas lengkap, cocok untuk pecinta alam, keluarga, atau rombongan.";
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>{title}</h1>
+      <p><em>Solo ke Dieng bukan lagi sekadar liburan, tapi sebuah cerita tentang kabut pagi, jejak budaya, dan lanskap yang mengajak diam. Kini tersedia paket wisata khusus dari Solo untuk menjelajahi semua itu.</em></p>
+
+      <p style="margin-top:1rem; line-height:1.7;">
+        Buat kamu yang berdomisili di Solo atau sedang berada di sana, <strong>paket wisata Dieng dari Solo</strong> ini membuka akses mudah menuju negeri awan. Tak perlu ribet atur kendaraan, booking tiket, atau pilih penginapan — cukup tentukan tanggal, sisanya kami urus.
+      </p>
+
+      <h2 style="margin-top:2rem;">Pilihan Durasi</h2>
+      <ul style="line-height:1.7;">
+        <li><strong>1 Hari:</strong> Cocok buat kamu yang mengejar golden sunrise dan waktu terbatas. Jemput malam, pulang sore.</li>
+        <li><strong>2 Hari 1 Malam:</strong> Santai tapi tetap padat destinasi. Termasuk penginapan dan sunset-viewing di spot tersembunyi.</li>
+        <li><strong>3 Hari 2 Malam:</strong> Paket lengkap untuk kamu yang ingin menjelajahi Dieng secara menyeluruh, tanpa terburu waktu.</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Fasilitas Termasuk</h2>
+      <ul style="line-height:1.7;">
+        <li>Transportasi Solo–Dieng PP dengan armada nyaman</li>
+        <li>Tiket masuk ke semua destinasi yang dikunjungi</li>
+        <li>Makan pagi, siang, dan malam sesuai durasi</li>
+        <li>Penginapan (untuk 2H1M dan 3H2M)</li>
+        <li>Tour leader & lokal guide bersertifikat</li>
+        <li>Dokumentasi opsional untuk kenangan visual</li>
+        <li>Snack & air mineral selama perjalanan</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Rangkaian Tempat yang Dikunjungi</h2>
+      <p style="line-height:1.7;">
+        Setiap paket memiliki rute yang dirancang realistis dan menyenangkan:
+      </p>
+      <ul style="line-height:1.7;">
+        <li>Puncak Sikunir – tempat terbaik menyaksikan matahari lahir dari balik gunung</li>
+        <li>Telaga Warna dan Batu Pandang – refleksi alam dan warna yang berubah seiring waktu</li>
+        <li>Kawah Sikidang – aktivitas vulkanik yang bisa kamu rasakan dari dekat</li>
+        <li>Komplek Candi Arjuna – jejak Hindu kuno di tanah tinggi</li>
+        <li>Telaga Dringo, Tol Awan, Bukit Scooter, dan tempat favorit lainnya</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Keunggulan dari Titik Solo</h2>
+      <ul style="line-height:1.7;">
+        <li>Akses darat langsung tanpa perlu transit atau ganti kendaraan</li>
+        <li>Lebih fleksibel soal titik jemput: rumah, stasiun, atau meeting point</li>
+        <li>Cocok untuk semua jenis pelancong: dari solo traveler hingga rombongan sekolah</li>
+        <li>Bisa gabung open trip atau request private trip sesuai kebutuhan</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Cara Pemesanan</h2>
+      <ol style="line-height:1.7;">
+        <li>Tentukan tanggal dan jumlah peserta</li>
+        <li>Kami siapkan itinerary dan konfirmasi ketersediaan</li>
+        <li>Lakukan pembayaran (DP atau lunas)</li>
+        <li>Dapatkan e-voucher & info teknis penjemputan</li>
+      </ol>
+
+      <h2 style="margin-top:2rem;">Pertanyaan yang Sering Muncul</h2>
+      <p><strong>Apakah harus warga Solo?</strong><br />Tidak. Paket ini bisa diikuti siapa pun, selama start dari Solo.</p>
+      <p><strong>Ada minimal peserta?</strong><br />Untuk open trip biasanya minimal 4 peserta. Tapi bisa menyesuaikan jadwal.</p>
+      <p><strong>Bisa request penginapan tertentu?</strong><br />Bisa untuk private trip. Open trip mengikuti standar penginapan mitra.</p>
+      <p><strong>Cocok untuk anak kecil?</strong><br />Ya. Banyak spot ramah anak, dan ritme dibuat nyaman untuk keluarga.</p>
+
+      <h2 style="margin-top:2rem;">Langkah Kecil ke Dunia yang Berbeda</h2>
+      <p style="line-height:1.7;">
+        Dari Solo ke Dieng hanya butuh satu keputusan: berangkat. Sisanya, biarkan kabut menyapa, danau menyembuhkan, dan budaya mengajarkan. Tak perlu menjadi pendaki atau fotografer profesional untuk menikmati magisnya tanah tinggi — kamu hanya perlu ingin pergi.
+      </p>
+
+      <p style="margin-top:1rem;">Untuk jadwal terbaru dan konsultasi, silakan hubungi tim kami kapan saja.</p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
