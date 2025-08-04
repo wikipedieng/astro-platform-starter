@@ -6,6 +6,7 @@ description: "Paket tour ke Dieng dengan titik berangkat dari Jogja. Cocok untuk
 author: "Redaksi Dieng"
 ---
 
+
 Dieng kini semakin mudah dijangkau, terutama bagi kamu yang sedang berada di Yogyakarta dan ingin menikmati udara sejuk dataran tinggi. **Paket wisata Dieng dari Jogja** ini cocok untuk siapa saja — baik warga lokal maupun wisatawan dari luar kota yang sedang berada di Jogja dan ingin menjelajah Dieng dengan cara yang praktis dan menyenangkan.
 
 Penjemputan dilakukan dari titik-titik strategis seperti Stasiun Tugu, Bandara YIA, atau hotel di pusat kota. Cocok untuk pelancong solo, keluarga, maupun rombongan.
