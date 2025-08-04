@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Navigation from '../../components/Navigation.astro';
+import CategorySidebar from '../../components/CategorySidebar.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = 'Paket Wisata Dieng dari Purwokerto – Pilihan Nyaman untuk Traveler Jakarta & Sekitarnya';
+const description = 'Turun kereta di Purwokerto? Kini tersedia paket wisata Dieng yang praktis, fleksibel, dan lengkap. Cocok untuk wisatawan dari Jakarta, Bandung, dan sekitarnya.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1 style="margin-bottom:0.5rem;">Paket Wisata Dieng dari Purwokerto</h1>
+      <p style="font-style:italic; margin-bottom:2rem;">Turun kereta di Purwokerto, langsung lanjut ke kabut dan sunrise Dieng tanpa perlu repot.</p>
+
+      <p style="line-height:1.7; margin-bottom:1rem;">
+        Purwokerto sering jadi gerbang utama menuju Dieng, terutama bagi wisatawan dari Jakarta dan sekitarnya yang memilih naik kereta malam dari Gambir atau Pasar Senen. Begitu sampai pagi di Stasiun Purwokerto, perjalanan pun berlanjut ke dataran tinggi — kabut tipis, danau yang memantulkan langit, dan sunrise emas dari puncak Sikunir sudah menunggu.
+      </p>
+
+      <p style="line-height:1.7; margin-bottom:1rem;">
+        Paket wisata Dieng dari Purwokerto ini dirancang untuk menjawab kebutuhan itu: efisien, fleksibel, dan bisa langsung jalan tanpa harus repot atur transportasi, booking penginapan, atau beli tiket masuk satu per satu. Semuanya sudah dirangkum jadi pengalaman utuh — tinggal nikmati.
+      </p>
+
+      <h2 style="margin-top:2rem;">Pilihan Paket yang Tersedia</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li><strong>1 Hari Pulang–Pergi</strong>: Cocok untuk kamu yang terbatas waktu tapi ingin sunrise dan highlight utama Dieng.</li>
+        <li><strong>2 Hari 1 Malam</strong>: Kombinasi sempurna antara wisata dan istirahat. Sunrise, sunset, dan lebih banyak destinasi.</li>
+        <li><strong>3 Hari 2 Malam</strong>: Eksplorasi penuh untuk kamu yang ingin benar-benar menyelami atmosfer Dieng.</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Fasilitas Termasuk</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li>Penjemputan dari Stasiun, hotel, atau titik lainnya di kota Purwokerto</li>
+        <li>Transportasi AC menuju dan selama di Dieng</li>
+        <li>Tiket masuk seluruh destinasi wisata</li>
+        <li>Makan sesuai itinerary</li>
+        <li>Penginapan (untuk paket 2H1M dan 3H2M)</li>
+        <li>Pemandu lokal yang komunikatif dan tahu spot terbaik</li>
+        <li>Dokumentasi opsional (foto/video)</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Destinasi Unggulan</h2>
+      <p style="line-height:1.7;">
+        Semua keindahan alam dan budaya Dieng akan kamu temui dalam rute ini: Sunrise Sikunir, Telaga Warna, Batu Pandang, Kawah Sikidang, Komplek Candi Arjuna, Telaga Merdada, Tol Atas Awan, Dieng Theater, hingga spot tersembunyi yang jarang dikunjungi turis biasa.
+      </p>
+
+      <h2 style="margin-top:2rem;">Kenapa Start dari Purwokerto?</h2>
+      <ul style="line-height:1.8; margin-left:1rem;">
+        <li>🛤️ Langsung turun dari kereta, tanpa perlu transit ke kota lain</li>
+        <li>⏱️ Jadwal fleksibel — bisa penjemputan pagi hari langsung dari stasiun</li>
+        <li>🧭 Alternatif hemat waktu untuk traveler dari Jakarta & sekitarnya</li>
+        <li>📍 Dekat ke Dieng, perjalanan relatif singkat dengan jalur nyaman</li>
+      </ul>
+
+      <h2 style="margin-top:2rem;">Cara Booking</h2>
+      <ol style="line-height:1.8; margin-left:1.2rem;">
+        <li>Pilih durasi dan tanggal keberangkatan</li>
+        <li>Kirim data penumpang dan lokasi jemput</li>
+        <li>Lakukan pembayaran sesuai instruksi</li>
+        <li>Terima konfirmasi & itinerary digital</li>
+      </ol>
+
+      <h2 style="margin-top:2rem;">FAQ</h2>
+      <p><strong>Apakah bisa ikut sendiri?</strong><br/>Bisa. Kami menerima solo traveler dan akan digabungkan dalam open trip jika tersedia.</p>
+      <p><strong>Apakah hanya untuk warga lokal?</strong><br/>Tidak. Paket ini untuk semua orang yang ingin memulai perjalanan dari Purwokerto — termasuk wisatawan luar kota.</p>
+      <p><strong>Bisakah ganti atau tambah destinasi?</strong><br/>Bisa untuk private trip. Untuk open trip mengikuti itinerary tetap.</p>
+      <p><strong>Ada penginapan khusus keluarga?</strong><br/>Ada. Kami menyesuaikan penginapan berdasarkan jumlah peserta dan kebutuhan.</p>
+
+      <div style="margin-top:2rem; padding:1rem; background:#f9f9f9; border-left:4px solid #19335a;">
+        <strong>📩 Tertarik ikut?</strong><br/>
+        Hubungi kami melalui WhatsApp atau cek jadwal keberangkatan. Rasakan pengalaman wisata ke Dieng dengan start nyaman dari Purwokerto.
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
