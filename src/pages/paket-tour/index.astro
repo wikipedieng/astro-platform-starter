@@ -5,10 +5,6 @@ import Navigation from '../../components/Navigation.astro';
 import CategorySidebar from '../../components/CategorySidebar.astro';
 import Footer from '../../components/Footer.astro';
 
-import { getCollection } from 'astro:content';
-
-const beritaList = await getCollection('paket-tour');
-
 const title = 'Paket Tour Dieng dari Berbagai Kota';
 const description = 'Temukan pilihan paket tour ke Dataran Tinggi Dieng dengan jadwal fleksibel dan fasilitas lengkap. Cocok untuk perjalanan keluarga, pasangan, atau rombongan.';
 ---
@@ -31,16 +27,31 @@ const description = 'Temukan pilihan paket tour ke Dataran Tinggi Dieng dengan j
         Berangkat dari kota seperti Jogja, Semarang, Solo, atau Purwokerto, semua pilihan dirangkum dalam satu tempat. Tak perlu bingung lagi soal rute, transportasi, atau tiket – cukup pilih paket yang sesuai, dan biarkan perjalanan membawa Anda menikmati kabut, candi, dan sunrise terbaik di dataran tinggi Dieng.
       </p>
 
-      <div class="berita-list" style="display:grid; gap:1.5rem; margin-top:2rem;">
-        {beritaList
-          .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
-          .map(({ data }) => (
-            <a href={`/paket-tour/${data.slug}/`} style="display:block; border:1px solid #ddd; border-radius:8px; padding:1rem; text-decoration:none; color:inherit;">
-              <h2 style="margin:0 0 0.5rem; font-size:1.25rem; color:#19335a;">{data.title}</h2>
-              <p style="font-size:0.9rem; color:#666;">{new Date(data.pubDate).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-              <p style="font-size:1rem; margin-top:0.5rem; line-height:1.5;">{data.description}</p>
-            </a>
-          ))}
+      <div class="berita-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-top:2rem;">
+        <a href="/paket-tour/jogja" style="display:block; border:1px solid #ddd; border-radius:10px; padding:1rem; text-decoration:none; color:inherit; background:#fff; transition:0.3s; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h2 style="margin:0 0 0.5rem; font-size:1.2rem; color:#19335a;">Paket Wisata Dieng dari Jogja</h2>
+          <p style="font-size:0.95rem; color:#555;">Berangkat dari Yogyakarta dengan rute efisien, cocok untuk traveler, keluarga, hingga mahasiswa yang ingin liburan singkat dan menyenangkan.</p>
+        </a>
+
+        <a href="/paket-tour/semarang" style="display:block; border:1px solid #ddd; border-radius:10px; padding:1rem; text-decoration:none; color:inherit; background:#fff; transition:0.3s; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h2 style="margin:0 0 0.5rem; font-size:1.2rem; color:#19335a;">Paket Wisata Dieng dari Semarang</h2>
+          <p style="font-size:0.95rem; color:#555;">Akses mudah dari Semarang dengan pilihan 1–3 hari. Sunrise, candi, dan kabut Dieng menanti dengan jadwal fleksibel dan fasilitas lengkap.</p>
+        </a>
+
+        <a href="/paket-tour/solo" style="display:block; border:1px solid #ddd; border-radius:10px; padding:1rem; text-decoration:none; color:inherit; background:#fff; transition:0.3s; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h2 style="margin:0 0 0.5rem; font-size:1.2rem; color:#19335a;">Paket Wisata Dieng dari Solo</h2>
+          <p style="font-size:0.95rem; color:#555;">Solusi liburan singkat dari Solo ke Dieng dengan opsi private trip atau open trip. Cocok untuk akhir pekan bersama teman atau keluarga.</p>
+        </a>
+
+        <a href="/paket-tour/purwokerto" style="display:block; border:1px solid #ddd; border-radius:10px; padding:1rem; text-decoration:none; color:inherit; background:#fff; transition:0.3s; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h2 style="margin:0 0 0.5rem; font-size:1.2rem; color:#19335a;">Paket Wisata Dieng dari Purwokerto</h2>
+          <p style="font-size:0.95rem; color:#555;">Berangkat dari Purwokerto dengan layanan antar jemput, penginapan nyaman, dan destinasi favorit di Dieng dalam satu paket simpel.</p>
+        </a>
+
+        <a href="/paket-tour/jakarta" style="display:block; border:1px solid #ddd; border-radius:10px; padding:1rem; text-decoration:none; color:inherit; background:#fff; transition:0.3s; box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+          <h2 style="margin:0 0 0.5rem; font-size:1.2rem; color:#19335a;">Paket Wisata Dieng dari Jakarta</h2>
+          <p style="font-size:0.95rem; color:#555;">Untuk warga Jakarta yang ingin liburan ke Dieng, tersedia paket lengkap mulai dari kereta/bus malam hingga tour lokal di pegunungan.</p>
+        </a>
       </div>
     </section>
   </main>
