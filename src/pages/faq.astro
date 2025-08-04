@@ -60,75 +60,19 @@ const faqItems = [
   { q: "Apakah penyedia bisa bantu sesi foto?", a: "Ya, beberapa penyedia menyediakan fotografer dokumentasi profesional atau opsional." },
   { q: "Apakah boleh reschedule?", a: "Boleh jika diberi kabar jauh hari. Reschedule mendadak tergantung ketersediaan." }
 ];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map(({ q, a }) => ({
+    '@type': 'Question',
+    'name': q,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': a
+    }
+  }))
+};
 ---
 
-<BaseLayout {title} {description}>
-  <Header />
-  <Navigation />
-  <main class="main-content">
-    <CategorySidebar />
-    <section class="faq-accordion">
-      <h1>{title}</h1>
-      <p><em>{description}</em></p>
-
-      {faqItems.map(({ q, a }) => (
-        <div class="faq-item">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-            {q}
-            <span class="faq-icon">▶</span>
-          </button>
-          <div class="faq-answer">{a}</div>
-        </div>
-      ))}
-    </section>
-  </main>
-  <Footer />
-</BaseLayout>
-
-<style>
-.faq-accordion {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 1rem;
-  font-family: system-ui, sans-serif;
-}
-.faq-item {
-  border-bottom: 1px solid #eee;
-}
-.faq-question {
-  background: none;
-  width: 100%;
-  text-align: left;
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #19335a;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-question:hover {
-  background: #f9f9f9;
-}
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding: 0 1rem;
-  font-size: 0.95rem;
-  color: #444;
-}
-.faq-item.active .faq-answer {
-  max-height: 300px;
-  padding-bottom: 1rem;
-}
-.faq-icon {
-  transition: transform 0.3s ease;
-}
-.faq-item.active .faq-icon {
-  transform: rotate(90deg);
-}
-</style>
+<script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
