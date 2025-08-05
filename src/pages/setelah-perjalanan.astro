@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import CategorySidebar from '../components/CategorySidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Panduan Setelah Perjalanan Tour';
+const description = 'Panduan lengkap langkah-langkah setelah mengikuti paket tour, termasuk memberikan ulasan, mengklaim barang hilang, mengajukan komplain, dan prosedur refund.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>🏁 Setelah Perjalanan</h1>
+      <p>Setelah perjalanan selesai, terdapat beberapa langkah penting yang dapat dilakukan untuk memberikan umpan balik, mengurus barang yang tertinggal, atau mengajukan komplain dan refund jika diperlukan. Panduan berikut dirancang untuk membantu Anda menutup perjalanan dengan baik dan profesional.</p>
+
+      <h2>1. Cara Memberi Ulasan &amp; Feedback Paket Tour</h2>
+      <p>Memberikan ulasan membantu penyedia layanan meningkatkan kualitas dan membantu calon wisatawan lain mengambil keputusan. Berikut langkahnya:</p>
+      <ul>
+        <li>Kunjungi situs resmi atau platform pemesanan yang digunakan</li>
+        <li>Tulis ulasan berdasarkan pengalaman nyata, mencakup aspek positif dan saran perbaikan</li>
+        <li>Gunakan bahasa yang sopan dan jelas</li>
+        <li>Sertakan foto atau video yang relevan untuk memperkuat ulasan</li>
+      </ul>
+      <p>Feedback yang objektif akan lebih bermanfaat bagi penyedia layanan dan calon peserta tour lainnya.</p>
+
+      <h2>2. Cara Mengklaim Barang Hilang atau Tertinggal</h2>
+      <p>Jika Anda kehilangan atau meninggalkan barang selama perjalanan, segera lakukan langkah berikut:</p>
+      <ul>
+        <li>Hubungi tour leader atau pihak penyelenggara sesegera mungkin</li>
+        <li>Sebutkan deskripsi barang secara detail (warna, ukuran, merek, ciri khusus)</li>
+        <li>Jelaskan lokasi terakhir Anda melihat barang tersebut</li>
+        <li>Tanyakan prosedur pengembalian barang dan biaya kirim jika diperlukan</li>
+      </ul>
+      <p>Semakin cepat laporan dibuat, semakin besar kemungkinan barang dapat ditemukan kembali.</p>
+
+      <h2>3. Cara Mengajukan Komplain Layanan</h2>
+      <p>Jika terdapat ketidakpuasan terhadap layanan yang diterima, ajukan komplain dengan cara yang tepat:</p>
+      <ul>
+        <li>Gunakan saluran resmi seperti email atau formulir komplain yang disediakan</li>
+        <li>Jelaskan masalah secara kronologis dengan fakta yang jelas</li>
+        <li>Sertakan bukti seperti foto, video, atau dokumen pendukung</li>
+        <li>Tetap gunakan bahasa yang sopan untuk menjaga komunikasi yang baik</li>
+      </ul>
+      <p>Komplain yang disampaikan secara profesional cenderung mendapatkan respon yang lebih cepat dan solutif.</p>
+
+      <h2>4. Panduan Mengajukan Refund (Jika Berlaku)</h2>
+      <p>Jika paket tour memenuhi syarat untuk pengembalian dana, ikuti prosedur berikut:</p>
+      <ul>
+        <li>Periksa kebijakan refund yang berlaku di situs resmi atau kontrak pemesanan</li>
+        <li>Ajukan permintaan refund melalui jalur resmi yang disediakan</li>
+        <li>Sertakan bukti pembayaran dan dokumen pendukung</li>
+        <li>Tanyakan estimasi waktu pemrosesan dan pastikan jumlah refund sesuai ketentuan</li>
+      </ul>
+      <p>Memahami kebijakan refund sejak awal akan memudahkan proses dan menghindari kesalahpahaman di kemudian hari.</p>
+
+      <h2>Kesimpulan</h2>
+      <p>Langkah-langkah setelah perjalanan bertujuan untuk menutup pengalaman tour dengan baik, memberikan kontribusi pada perbaikan layanan, serta menyelesaikan urusan yang tertunda seperti klaim barang, komplain, atau refund. Dengan mengikuti prosedur yang tepat, semua pihak dapat merasa diuntungkan dan pengalaman perjalanan dapat menjadi lebih bermakna.</p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
