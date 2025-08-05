@@ -26,15 +26,8 @@
 
 <style>
 .categories-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-/* Mobile: otomatis 1 kolom */
-@media (max-width: 768px) {
-  .categories-wrapper {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Jarak antar kartu */
 }
 </style>
