@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import CategorySidebar from '../components/CategorySidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Panduan Saat Tour Berlangsung';
+const description = 'Panduan lengkap untuk peserta tour dalam melaporkan kendala, meminta perubahan rute, mengikuti aktivitas outdoor, dan menjaga etika selama perjalanan.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>🚍 Saat Tour Berlangsung</h1>
+      <p>Ketika tour sedang berlangsung, peserta perlu memahami tata cara berinteraksi, prosedur melaporkan masalah, hingga etika yang harus dijaga. Hal ini membantu menjaga kenyamanan bersama serta memastikan perjalanan berjalan sesuai rencana.</p>
+
+      <h2>1. Cara Melaporkan Masalah atau Kendala di Lapangan</h2>
+      <p>Jika Anda menghadapi kendala selama perjalanan, segera sampaikan kepada tour leader atau guide melalui cara berikut:</p>
+      <ul>
+        <li>Sampaikan secara langsung di lokasi saat kendala terjadi</li>
+        <li>Gunakan saluran komunikasi resmi seperti WhatsApp atau panggilan telepon</li>
+        <li>Jelaskan masalah secara detail, termasuk lokasi, waktu, dan kondisi</li>
+        <li>Sertakan foto atau video jika diperlukan untuk mempermudah penanganan</li>
+      </ul>
+      <p>Melaporkan masalah dengan cepat akan membantu tim tour mencari solusi yang tepat tanpa mengganggu jadwal perjalanan secara signifikan.</p>
+
+      <h2>2. Cara Meminta Perubahan Rute Destinasi</h2>
+      <p>Perubahan rute atau destinasi hanya dapat dilakukan dengan persetujuan tour leader. Langkah yang dapat dilakukan:</p>
+      <ul>
+        <li>Ajukan permintaan perubahan secara langsung atau melalui komunikasi resmi</li>
+        <li>Pastikan alasan perubahan jelas dan masuk akal (misalnya cuaca buruk atau kondisi kesehatan)</li>
+        <li>Pahami bahwa perubahan mungkin mempengaruhi jadwal atau destinasi lain</li>
+        <li>Ikuti keputusan akhir yang diambil oleh pihak penyelenggara</li>
+      </ul>
+
+      <h2>3. Panduan Mengikuti Aktivitas Outdoor</h2>
+      <p>Banyak paket tour menyertakan aktivitas luar ruangan seperti hiking, jeep tour, atau kunjungan ke area alam terbuka. Untuk keamanan dan kenyamanan:</p>
+      <ul>
+        <li>Gunakan pakaian dan alas kaki yang sesuai dengan aktivitas</li>
+        <li>Ikuti instruksi pemandu atau driver jeep dengan disiplin</li>
+        <li>Bawa perlengkapan tambahan seperti topi, kacamata hitam, dan air minum</li>
+        <li>Patuhi aturan keselamatan di lokasi, termasuk pembatasan akses di area tertentu</li>
+        <li>Hindari tindakan yang dapat membahayakan diri sendiri atau orang lain</li>
+      </ul>
+
+      <h2>4. Etika Selama Perjalanan Tour</h2>
+      <p>Menjaga etika adalah kunci kenyamanan bersama. Beberapa hal yang perlu diperhatikan:</p>
+      <ul>
+        <li>Tepat waktu pada setiap jadwal keberangkatan</li>
+        <li>Hargai privasi dan kenyamanan sesama peserta</li>
+        <li>Jaga kebersihan di kendaraan dan lokasi wisata</li>
+        <li>Gunakan bahasa yang sopan dan hindari konflik selama perjalanan</li>
+        <li>Dukung suasana positif agar semua peserta menikmati perjalanan</li>
+      </ul>
+
+      <h2>Kesimpulan</h2>
+      <p>Memahami prosedur dan etika saat tour berlangsung membantu menjaga kelancaran perjalanan dan memberikan pengalaman terbaik bagi semua peserta. Dengan melaporkan masalah dengan cepat, menghormati keputusan penyelenggara, serta menjaga sikap selama perjalanan, Anda turut menciptakan perjalanan yang aman, nyaman, dan menyenangkan.</p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
