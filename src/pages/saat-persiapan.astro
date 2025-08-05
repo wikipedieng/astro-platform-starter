@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import CategorySidebar from '../components/CategorySidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Panduan Saat Persiapan Perjalanan Tour';
+const description = 'Panduan lengkap persiapan sebelum memulai perjalanan tour, termasuk daftar barang bawaan, tips keamanan, asuransi perjalanan, dan cara menghubungi tour leader.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>🧳 Saat Persiapan</h1>
+      <p>Persiapan yang matang sebelum keberangkatan akan membantu memastikan perjalanan tour berjalan lancar dan menyenangkan. Berikut adalah panduan detail yang dapat diikuti untuk memastikan semua kebutuhan dan langkah keamanan terpenuhi.</p>
+
+      <h2>1. Daftar Barang yang Wajib Dibawa Saat Tour</h2>
+      <p>Menyiapkan barang bawaan dengan benar adalah langkah awal yang penting. Pastikan untuk membawa:</p>
+      <ul>
+        <li>Pakaian sesuai dengan kondisi cuaca di destinasi (baju hangat, jas hujan, atau pakaian santai)</li>
+        <li>Sepatu atau sandal yang nyaman untuk aktivitas berjalan kaki</li>
+        <li>Perlengkapan pribadi seperti peralatan mandi, obat-obatan, dan skincare</li>
+        <li>Identitas resmi (KTP, SIM, atau paspor) dan salinannya</li>
+        <li>Perlengkapan elektronik seperti ponsel, charger, dan power bank</li>
+      </ul>
+      <p>Hindari membawa barang berlebihan untuk mengurangi risiko kerepotan selama perjalanan.</p>
+
+      <h2>2. Tips Menjaga Keamanan Barang Pribadi Selama Tour</h2>
+      <p>Keamanan barang pribadi adalah prioritas selama perjalanan. Berikut beberapa langkah yang dapat diambil:</p>
+      <ul>
+        <li>Gunakan tas dengan resleting dan pastikan selalu tertutup rapat</li>
+        <li>Simpan dokumen penting dan uang tunai di dompet kecil atau pouch yang mudah dijangkau</li>
+        <li>Gunakan kunci tambahan untuk koper atau tas besar</li>
+        <li>Hindari membawa perhiasan atau barang berharga berlebihan</li>
+        <li>Selalu awasi barang bawaan Anda, terutama di tempat ramai</li>
+      </ul>
+
+      <h2>3. Cara Mengurus Asuransi Perjalanan (Jika Tersedia)</h2>
+      <p>Asuransi perjalanan dapat memberikan perlindungan tambahan terhadap risiko yang mungkin terjadi. Untuk mengurusnya:</p>
+      <ul>
+        <li>Tanyakan kepada penyedia tour apakah asuransi perjalanan termasuk dalam paket</li>
+        <li>Jika tidak tersedia, Anda dapat membeli asuransi perjalanan secara mandiri dari penyedia resmi</li>
+        <li>Baca dengan teliti syarat dan ketentuan polis asuransi, termasuk cakupan perlindungan</li>
+        <li>Simpan bukti polis dan nomor kontak darurat asuransi</li>
+      </ul>
+
+      <h2>4. Cara Menghubungi Tour Leader atau Guide</h2>
+      <p>Memiliki kontak yang jelas dengan tour leader atau guide penting untuk koordinasi selama perjalanan. Pastikan untuk:</p>
+      <ul>
+        <li>Mendapatkan nomor telepon atau aplikasi komunikasi yang digunakan (WhatsApp, Telegram, dll.)</li>
+        <li>Menyimpan kontak di ponsel sebelum keberangkatan</li>
+        <li>Mengetahui titik kumpul utama dan waktu keberangkatan</li>
+        <li>Menghubungi tour leader jika ada perubahan atau kendala yang dihadapi</li>
+      </ul>
+
+      <h2>Kesimpulan</h2>
+      <p>Persiapan yang tepat tidak hanya membuat perjalanan lebih nyaman, tetapi juga mengurangi potensi masalah yang mungkin timbul di jalan. Dengan membawa perlengkapan yang sesuai, menjaga keamanan barang, mengurus asuransi, dan memastikan komunikasi yang jelas dengan tour leader, Anda dapat menikmati pengalaman tour dengan lebih tenang dan aman.</p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
