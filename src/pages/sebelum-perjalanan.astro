@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
+import CategorySidebar from '../components/CategorySidebar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'Panduan Sebelum Perjalanan Tour';
+const description = 'Panduan lengkap langkah-langkah yang perlu dilakukan sebelum mengikuti paket tour, mulai dari memilih paket, booking, pembayaran, hingga mengatur titik jemput.';
+---
+
+<BaseLayout {title} {description}>
+  <Header />
+  <Navigation />
+
+  <main class="main-content">
+    <CategorySidebar />
+
+    <section class="seasonal">
+      <h1>📅 Sebelum Perjalanan</h1>
+      <p>Sebelum memulai petualangan bersama paket tour pilihan Anda, penting untuk memahami langkah-langkah persiapan agar perjalanan berjalan lancar. Panduan ini membahas hal-hal yang perlu dilakukan sejak proses memilih paket hingga memastikan titik jemput sesuai dengan rencana.</p>
+
+      <h2>1. Cara Memilih Paket Tour yang Tepat</h2>
+      <p>Tentukan jenis perjalanan yang sesuai dengan kebutuhan dan preferensi Anda. Pertimbangkan faktor durasi, destinasi yang ingin dikunjungi, fasilitas yang disediakan, dan budget yang tersedia. Membaca detail itinerary dan menyesuaikan dengan waktu libur akan membantu memilih paket yang paling sesuai.</p>
+
+      <h2>2. Cara Booking Paket Tour Online</h2>
+      <p>Lakukan pemesanan melalui situs resmi atau platform booking yang terpercaya. Pastikan untuk mengisi data dengan benar, memilih tanggal keberangkatan yang tersedia, dan menyimpan bukti konfirmasi pemesanan untuk referensi.</p>
+
+      <h2>3. Cara Membayar Paket Tour</h2>
+      <p>Gunakan metode pembayaran yang disediakan, seperti transfer bank, e-wallet, atau kartu kredit. Pastikan untuk memeriksa nominal yang harus dibayar dan tenggat waktu pembayaran. Simpan bukti pembayaran sebagai arsip penting untuk proses verifikasi.</p>
+
+      <h2>4. Cara Mengisi Form Data Peserta Tour</h2>
+      <p>Isi formulir data peserta sesuai informasi yang diminta, seperti nama lengkap, nomor identitas, kontak darurat, dan preferensi makanan (jika ada). Data ini penting untuk keperluan administrasi dan kenyamanan perjalanan.</p>
+
+      <h2>5. Cara Mengecek Ketersediaan Jadwal Tour</h2>
+      <p>Sebelum melakukan pembayaran, pastikan jadwal tour yang Anda pilih masih tersedia. Hubungi pihak penyedia jika perlu untuk mengonfirmasi ketersediaan kuota, terutama pada musim liburan atau akhir pekan.</p>
+
+      <h2>6. Cara Mengubah Titik Jemput (Meeting Point)</h2>
+      <p>Jika perlu mengubah titik jemput, segera hubungi penyedia tour melalui saluran resmi. Perubahan yang dilakukan lebih awal akan memudahkan penyesuaian jadwal dan rute perjalanan. Pastikan Anda menerima konfirmasi tertulis terkait perubahan tersebut.</p>
+
+      <h2>Kesimpulan</h2>
+      <p>Persiapan sebelum perjalanan adalah langkah penting untuk memastikan pengalaman tour yang nyaman dan sesuai rencana. Dengan mengikuti panduan ini, Anda dapat meminimalkan risiko kendala selama perjalanan dan memaksimalkan kenyamanan serta kepuasan wisata Anda.</p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
